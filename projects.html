@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project — M Rafi Hibatulloh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">M Rafi<span class="accent">.dev</span></a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="navbar-cta">Contact Me →</a>
+
+        <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section class="section tight-bottom">
+        <h1 class="section-heading">Project yang Sedang dan Pernah Saya Buat</h1>
+        <p style="margin-top:12px; color:var(--ink-60); max-width:560px;">
+            Kumpulan project latihan dan tugas sekolah/course yang saya kerjakan, baik mandiri
+            maupun bersama tim. Klik "Kunjungi Web" untuk melihat hasilnya langsung.
+        </p>
+    </section>
+
+    <section class="section" style="padding-top:16px;">
+        <div class="grid-3">
+
+            <!-- TEFA -->
+            <div class="card no-padding">
+                <div class="project-image-slot">
+                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Tefa.jpeg</p>
+                    <img src="assets/project/Tefa.jpeg" alt="Tangkapan layar Sistem TEFA" onerror="this.style.display='none'">
+                </div>
+                <div class="project-card-inner">
+                    <p class="project-year">Sekarang</p>
+                    <h3 class="project-title">Sistem Informasi TEFA Sekolah</h3>
+                    <p class="project-desc">Membangun sistem informasi Teaching Factory (TEFA) sekolah berbasis web secara tim untuk mengelola alur kerja, layanan, serta produk/jasa di setiap jurusan. (Desain UI/UX)</p>
+                    <div class="project-tags"><span class="badge">Laravel</span></div>
+                    <a href="https://github.com/Varraaa" target="_blank" rel="noopener" class="project-link">
+                        Kunjungi Web
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Booking Pesawat -->
+            <div class="card no-padding">
+                <div class="project-image-slot">
+                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Clouds.jpeg</p>
+                    <img src="assets/project/Clouds.jpeg" alt="Tangkapan layar Web Booking Pesawat" onerror="this.style.display='none'">
+                </div>
+                <div class="project-card-inner">
+                    <p class="project-year">2026</p>
+                    <h3 class="project-title">Web Booking Pesawat</h3>
+                    <p class="project-desc">Project course BWA: membuat web booking pesawat menggunakan Laravel, Filament, Midtrans, dan Mailtrap.</p>
+                    <div class="project-tags">
+                        <span class="badge">Laravel</span><span class="badge">Filament</span><span class="badge">Midtrans</span>
+                    </div>
+                    <a href="https://github.com/Varraaa" target="_blank" rel="noopener" class="project-link">
+                        Kunjungi Web
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Arsen -->
+            <div class="card no-padding">
+                <div class="project-image-slot">
+                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Arsen.jpeg</p>
+                    <img src="assets/project/Arsen.jpeg" alt="Tangkapan layar Landing Page Arsen" onerror="this.style.display='none'">
+                </div>
+                <div class="project-card-inner">
+                    <p class="project-year">2026</p>
+                    <h3 class="project-title">Landing Page Arsen</h3>
+                    <p class="project-desc">Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis kedai kopi Arsen guna memperkuat pemahaman frontend development.</p>
+                    <div class="project-tags">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
+                    </div>
+                    <a href="https://coffee-arsen.vercel.app/" target="_blank" rel="noopener" class="project-link">
+                        Kunjungi Web
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Zenition -->
+            <div class="card no-padding">
+                <div class="project-image-slot">
+                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Zenition.jpeg</p>
+                    <img src="assets/project/Zenition.jpeg" alt="Tangkapan layar Landing Page Zenition" onerror="this.style.display='none'">
+                </div>
+                <div class="project-card-inner">
+                    <p class="project-year">2026</p>
+                    <h3 class="project-title">Landing Page Zenition</h3>
+                    <p class="project-desc">Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis fashion Zenition guna memperkuat pemahaman frontend development.</p>
+                    <div class="project-tags">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
+                    </div>
+                    <a href="https://zenition.vercel.app/" target="_blank" rel="noopener" class="project-link">
+                        Kunjungi Web
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Skinry -->
+            <div class="card no-padding">
+                <div class="project-image-slot">
+                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Skinry.jpeg</p>
+                    <img src="assets/project/Skinry.jpeg" alt="Tangkapan layar Landing Page Skinry" onerror="this.style.display='none'">
+                </div>
+                <div class="project-card-inner">
+                    <p class="project-year">2026</p>
+                    <h3 class="project-title">Landing Page Skinry</h3>
+                    <p class="project-desc">Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis skincare Skinry guna memperkuat pemahaman frontend development.</p>
+                    <div class="project-tags">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
+                    </div>
+                    <a href="https://skinry.vercel.app/" target="_blank" rel="noopener" class="project-link">
+                        Kunjungi Web
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Kantin Ambu -->
+            <div class="card no-padding">
+                <div class="project-image-slot">
+                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/KantinAmbu.jpeg</p>
+                    <img src="assets/project/KantinAmbu.jpeg" alt="Tangkapan layar Web Kantin Ambu" onerror="this.style.display='none'">
+                </div>
+                <div class="project-card-inner">
+                    <p class="project-year">2025</p>
+                    <h3 class="project-title">Web Kantin Ambu (POS)</h3>
+                    <p class="project-desc">Sistem kasir (POS) kantin berbasis web secara tim untuk proyek Ujikom, mencakup fitur transaksi real-time, manajemen menu, dan laporan keuangan otomatis.</p>
+                    <div class="project-tags">
+                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span><span class="badge">PHP</span>
+                    </div>
+                    <a href="https://github.com/Varraaa" target="_blank" rel="noopener" class="project-link">
+                        Kunjungi Web
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA penutup -->
+    <section class="cta-band" style="margin-top:40px;">
+        <div class="cta-band-inner">
+            <h2>Ada project yang ingin didiskusikan?</h2>
+            <a href="contact.html" class="btn btn-primary on-dark mt-8">Hubungi Saya →</a>
+        </div>
+    </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <p class="footer-name">M Rafi Hibatulloh</p>
+                <p class="footer-role">Aspiring Web Developer</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:mrafi.hiba@gmail.com" target="_blank">Email</a>
+                <a href="https://wa.me/6281297577567" target="_blank">WhatsApp</a>
+                <a href="https://github.com/Varraaa" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> M Rafi Hibatulloh.</p>
+            <p>Terima kasih sudah berkunjung 👋</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tentang Saya — M Rafi Hibatulloh</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="navbar-inner">
+        <a href="index.html" class="navbar-logo">M Rafi<span class="accent">.dev</span></a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <a href="contact.html" class="navbar-cta">Contact Me →</a>
+
+        <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="container">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- ================= HEADER + BIO ================= -->
+    <section class="about-header">
+
+        <div>
+            <h1 class="section-heading">Tentang Saya</h1>
+
+            <!-- Ganti src dengan foto kamu di assets/ -->
+            <div class="profile-photo">
+                <img src="assets/jas.jpeg" alt="Foto M Rafi Hibatulloh">
+            </div>
+
+            <div class="contact-mini">
+                <p>📍 Soreang, Kab. Bandung 49012</p>
+                <p>📞 +62 812-8757-7567</p>
+                <p>✉️ mrafi.hiba@gmail.com</p>
+            </div>
+        </div>
+
+        <div>
+            <p class="bio-text">
+                Pengembang Web Developer dengan keahlian utama pada teknologi HTML, CSS,
+                JavaScript, PHP, dan Laravel. Berpengalaman membangun berbagai proyek aplikasi
+                web secara mandiri maupun kolaboratif, dibekali sertifikasi/pelatihan dari
+                Dicoding dan BWA, untuk memberikan solusi digital yang fungsional dan efisien.
+            </p>
+            <p class="bio-text">
+                Selain itu juga, saya terbiasa bekerja menggunakan workflow kombinasi antara
+                Stitch dan Figma untuk merancang desain UI/UX untuk merancang antarmuka yang
+                ramah pengguna.
+            </p>
+
+            <!-- ============ SKILLS ============ -->
+            <div class="skills-block">
+                <h2>Keahlian</h2>
+
+                <div class="skill-row">
+                    <div class="skill-labels"><span>HTML</span><span class="level">Midle</span></div>
+                    <div class="skill-track"><div class="skill-fill" style="width:65%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-labels"><span>CSS</span><span class="level">Midle</span></div>
+                    <div class="skill-track"><div class="skill-fill" style="width:65%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-labels"><span>Laravel</span><span class="level">Beginner</span></div>
+                    <div class="skill-track"><div class="skill-fill" style="width:35%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-labels"><span>JavaScript</span><span class="level">Beginner</span></div>
+                    <div class="skill-track"><div class="skill-fill" style="width:35%"></div></div>
+                </div>
+                <div class="skill-row">
+                    <div class="skill-labels"><span>PHP</span><span class="level">Beginner</span></div>
+                    <div class="skill-track"><div class="skill-fill" style="width:35%"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= EDUCATION ================= -->
+    <section class="section-surface">
+        <div class="section">
+            <h2 class="section-heading" style="margin-bottom:40px;">Pendidikan</h2>
+
+            <div class="timeline">
+                <div class="timeline-item active">
+                    <p class="timeline-date">2024 — Sekarang</p>
+                    <h3 class="timeline-title">Rekayasa Perangkat Lunak</h3>
+                    <p class="timeline-sub">SMKN 1 Katapang</p>
+                </div>
+                <div class="timeline-item">
+                    <p class="timeline-date">2021 — 2024</p>
+                    <h3 class="timeline-title">Sekolah Menengah Pertama</h3>
+                    <p class="timeline-sub">SMPN 1 Soreang</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TRAINING / PELATIHAN ================= -->
+    <section class="section">
+        <h2 class="section-heading" style="margin-bottom:40px;">Pelatihan &amp; Sertifikasi</h2>
+
+        <div class="grid-3">
+            <div class="card">
+                <p class="training-year">2026</p>
+                <h3 class="training-title">Course BWA</h3>
+                <p class="training-desc">Mengikuti course pembuatan web booking pesawat. Tech stack yang digunakan: Laravel, Midtrans, Filament, dll.</p>
+            </div>
+            <div class="card">
+                <p class="training-year">2026</p>
+                <h3 class="training-title">Dicoding x DBS Foundation</h3>
+                <p class="training-desc">Mengikuti beberapa course online: dasar pemrograman web, frontend, dan dasar pemrograman JavaScript.</p>
+            </div>
+            <div class="card">
+                <p class="training-year">2026</p>
+                <h3 class="training-title">Dicoding x PIJAK</h3>
+                <p class="training-desc">Mengikuti pembelajaran online tentang konsep dasar Artificial Intelligence (AI) serta pemanfaatannya di teknologi.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div>
+                <p class="footer-name">M Rafi Hibatulloh</p>
+                <p class="footer-role">Aspiring Web Developer</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:mrafi.hiba@gmail.com" target="_blank">Email</a>
+                <a href="https://wa.me/6281297577567" target="_blank">WhatsApp</a>
+                <a href="https://github.com/Varraaa" target="_blank">GitHub</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> M Rafi Hibatulloh.</p>
+            <p>Terima kasih sudah berkunjung 👋</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
