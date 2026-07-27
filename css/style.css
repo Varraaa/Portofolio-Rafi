@@ -196,8 +196,7 @@ img {
 }
 
 .section-tag::before {
-    content: "//";
-    color: #B9C0CC;
+    content: "";
 }
 
 .section-tag.center {
