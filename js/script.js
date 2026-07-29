@@ -1,4 +1,4 @@
-// ===================== TOGGLE MENU MOBILE =====================
+// TOGGLE MENU MOBILE 
 document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ===================== EFEK KETIK HERO (whoami) =====================
+// EFEK KETIK HERO 
     const el = document.getElementById('typed-output');
     if (el) {
         const text = 'M Rafi Hibatulloh — Aspiring Web Developer';
