@@ -1,214 +1,399 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project — M Rafi Hibatulloh</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Direktori Proyek — M Rafi Hibatulloh</title>
+  <meta name="description" content="Koleksi proyek rekayasa web, sistem informasi kasir POS, web booking, dan simulasi frontend modern oleh M Rafi Hibatulloh.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAVBAR  -->
-<header class="navbar">
-    <div class="navbar-inner">
-        <a href="index.html" class="navbar-logo">M Rafi<span class="accent">.dev</span></a>
+  <!-- STICKY GLASS NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <span>M Rafi</span>
+        <span class="brand-badge">dev.v2</span>
+      </a>
 
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+      <nav class="nav-links" aria-label="Navigasi Utama">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="projects.html" class="nav-item active">Projects</a>
+        <a href="project-detail.html" class="nav-item">Case Study</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </nav>
 
-        <a href="contact.html" class="navbar-cta">Contact Me →</a>
-
-        <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+      <div class="nav-actions">
+        <button type="button" class="cmd-k-trigger" aria-label="Buka Command Palette">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Cari</span>
+          <kbd class="cmd-k-kbd">Ctrl K</kbd>
         </button>
-    </div>
 
-    <div id="mobile-menu" class="mobile-menu">
-        <div class="container">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html" class="active">Projects</a>
-            <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-primary btn-sm">Hubungi Saya →</a>
+
+        <button id="menu-toggle" class="mobile-toggle" aria-label="Buka Menu Mobile" aria-expanded="false">
+          &#9776;
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <a href="index.html" class="mobile-nav-link">
+      <span>Home</span>
+      <span class="font-mono" style="font-size:11px;">01</span>
+    </a>
+    <a href="projects.html" class="mobile-nav-link active">
+      <span>Projects Directory</span>
+      <span class="font-mono" style="font-size:11px;">02</span>
+    </a>
+    <a href="project-detail.html" class="mobile-nav-link">
+      <span>Technical Case Study</span>
+      <span class="font-mono" style="font-size:11px;">03</span>
+    </a>
+    <a href="about.html" class="mobile-nav-link">
+      <span>About & Philosophy</span>
+      <span class="font-mono" style="font-size:11px;">04</span>
+    </a>
+    <a href="contact.html" class="mobile-nav-link">
+      <span>Contact</span>
+      <span class="font-mono" style="font-size:11px;">05</span>
+    </a>
+  </div>
+
+  <main>
+    <!-- DIRECTORY HEADER -->
+    <section class="section" style="padding-bottom: var(--space-8);">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-kicker">Showcase Portofolio</span>
+          <h1 class="section-title" style="font-size: var(--text-4xl);">Direktori Proyek Rekayasa</h1>
+          <p class="section-subtitle">
+            Kumpulan eksplorasi sistematis mulai dari sistem informasi berbasis Laravel, manajemen kasir POS, hingga landing page performa tinggi.
+          </p>
         </div>
-    </div>
-</header>
 
-<main>
+        <!-- SEARCH & FILTER TOOLBAR -->
+        <div class="projects-filter-bar reveal reveal-delay-1" style="margin-top:var(--space-8);">
+          <div class="search-input-wrapper">
+            <svg class="search-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="project-search" class="search-input" placeholder="Cari berdasarkan judul, fitur, atau teknologi (contoh: Laravel, POS, Midtrans)...">
+          </div>
 
-    <section class="section tight-bottom">
-        <h1 class="section-heading">Project yang Sedang dan Pernah Saya Buat</h1>
-        <p style="margin-top:12px; color:var(--ink-60); max-width:560px;">
-            Kumpulan project latihan dan tugas sekolah/course yang saya kerjakan, baik mandiri
-            maupun bersama tim. Klik "Kunjungi Web" untuk melihat hasilnya langsung.
+          <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-3);">
+            <div class="filter-pills" role="tablist">
+              <button type="button" class="filter-btn active" data-category="all">Semua Proyek</button>
+              <button type="button" class="filter-btn" data-category="fullstack">Full-Stack & Backend</button>
+              <button type="button" class="filter-btn" data-category="frontend">Frontend Modern</button>
+              <button type="button" class="filter-btn" data-category="system">Sistem & POS</button>
+            </div>
+            <span id="project-count" class="filter-count-indicator">Menampilkan 6 dari 6 proyek</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS GRID -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="grid-3" id="projects-container">
+
+          <!-- Project 1: Sistem TEFA Sekolah -->
+          <article class="card card-flush project-card tilt-card spotlight-card project-item" 
+                   data-title="Sistem Informasi TEFA Sekolah" 
+                   data-category="fullstack system" 
+                   data-tags="laravel php ui/ux figma database" 
+                   data-desc="Membangun sistem informasi Teaching Factory (TEFA) sekolah berbasis web secara tim untuk mengelola alur kerja, layanan, serta produk/jasa di setiap jurusan.">
+            <div class="project-thumb">
+              <img src="assets/project/Tefa.jpeg" alt="Tangkapan layar Sistem TEFA Sekolah" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-indigo">Sistem Sekolah</span>
+                <span class="font-mono text-dim" style="font-size:11px;">Aktif (2026)</span>
+              </div>
+              <h2 class="project-title">Sistem Informasi TEFA Sekolah</h2>
+              <p class="project-desc">
+                Membangun sistem informasi Teaching Factory (TEFA) sekolah berbasis web secara kolaboratif untuk mengelola alur kerja jurusan, katalog produk, dan pesanan jasa siswa.
+              </p>
+              <div class="project-tags">
+                <span class="badge">Laravel</span>
+                <span class="badge">PHP</span>
+                <span class="badge">UI/UX</span>
+                <span class="badge">Workflow</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" class="project-link" style="color:var(--accent-primary);">
+                  Repositori GitHub ↗
+                </a>
+                <span class="font-mono" style="font-size:11px; color:var(--accent-emerald);">● Sedang Aktif</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Clouds Booking Pesawat -->
+          <article class="card card-flush project-card tilt-card spotlight-card project-item" 
+                   data-title="Clouds Web Booking Pesawat" 
+                   data-category="fullstack" 
+                   data-tags="laravel filament midtrans mailtrap payment" 
+                   data-desc="Platform course BWA: membuat web booking pesawat menggunakan Laravel, Filament, Midtrans, dan Mailtrap.">
+            <div class="project-thumb">
+              <img src="assets/project/Clouds.jpeg" alt="Tangkapan layar Web Booking Pesawat Clouds" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-indigo">Full-Stack Laravel</span>
+                <span class="font-mono text-dim" style="font-size:11px;">2026</span>
+              </div>
+              <h2 class="project-title">Clouds — Flight Booking Web</h2>
+              <p class="project-desc">
+                Sistem reservasi penerbangan komprehensif dengan manajemen admin Filament, integrasi simulasi payment gateway Midtrans Snap, dan template tiket via Mailtrap.
+              </p>
+              <div class="project-tags">
+                <span class="badge">Laravel</span>
+                <span class="badge">Filament</span>
+                <span class="badge">Midtrans</span>
+                <span class="badge">Mailtrap</span>
+              </div>
+              <div class="project-actions">
+                <a href="project-detail.html?id=clouds-booking" class="project-link" style="color:var(--accent-primary);">
+                  Studi Kasus Teknis →
+                </a>
+                <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Web Kantin Ambu (POS) -->
+          <article class="card card-flush project-card tilt-card spotlight-card project-item" 
+                   data-title="Web Kantin Ambu POS Kasir" 
+                   data-category="fullstack system" 
+                   data-tags="php mysql pos kasir javascript ujikom" 
+                   data-desc="Sistem kasir POS kantin berbasis web secara tim untuk proyek Ujikom, mencakup fitur transaksi real-time, manajemen menu, dan laporan keuangan otomatis.">
+            <div class="project-thumb">
+              <img src="assets/project/KantinAmbu.jpeg" alt="Tangkapan layar Web Kantin Ambu POS" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-emerald">Ujikom / POS</span>
+                <span class="font-mono text-dim" style="font-size:11px;">2025</span>
+              </div>
+              <h2 class="project-title">Web Kantin Ambu (POS Kasir)</h2>
+              <p class="project-desc">
+                Sistem kasir mandiri terintegrasi basis data relasional untuk efisiensi operasional kantin, pelacakan inventaris bahan, dan rekap omzet harian.
+              </p>
+              <div class="project-tags">
+                <span class="badge">PHP Native</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Bootstrap/Custom</span>
+              </div>
+              <div class="project-actions">
+                <a href="project-detail.html?id=kantin-ambu" class="project-link" style="color:var(--accent-primary);">
+                  Studi Kasus Teknis →
+                </a>
+                <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: Landing Page Zenition -->
+          <article class="card card-flush project-card tilt-card spotlight-card project-item" 
+                   data-title="Landing Page Zenition Fashion" 
+                   data-category="frontend" 
+                   data-tags="html css js frontend fashion ecommerce vercel" 
+                   data-desc="Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis fashion Zenition guna memperkuat pemahaman frontend development.">
+            <div class="project-thumb">
+              <img src="assets/project/Zenition.jpeg" alt="Tangkapan layar Landing Page Zenition" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-cyan">Frontend</span>
+                <span class="font-mono text-dim" style="font-size:11px;">2026</span>
+              </div>
+              <h2 class="project-title">Landing Page Zenition</h2>
+              <p class="project-desc">
+                Simulasi antarmuka landing page interaktif merek pakaian modern dengan animasi scroll halus, grid katalog produk, dan optimasi performa loading.
+              </p>
+              <div class="project-tags">
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS3</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Vercel</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://zenition.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:var(--accent-primary);">
+                  Kunjungi Web ↗
+                </a>
+                <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Landing Page Arsen Coffee -->
+          <article class="card card-flush project-card tilt-card spotlight-card project-item" 
+                   data-title="Landing Page Arsen Kedai Kopi" 
+                   data-category="frontend" 
+                   data-tags="html css js coffee kedai frontend vercel" 
+                   data-desc="Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis kedai kopi Arsen guna memperkuat pemahaman frontend development.">
+            <div class="project-thumb">
+              <img src="assets/project/Arsen.jpeg" alt="Tangkapan layar Landing Page Arsen" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-cyan">Frontend</span>
+                <span class="font-mono text-dim" style="font-size:11px;">2026</span>
+              </div>
+              <h2 class="project-title">Landing Page Arsen Coffee</h2>
+              <p class="project-desc">
+                Desain landing page kafe dengan nuansa hangat, daftar menu kopi interaktif, formulir reservasi meja sederhana, dan tata letak mobile-friendly.
+              </p>
+              <div class="project-tags">
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS Flexbox</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Vercel</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://coffee-arsen.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:var(--accent-primary);">
+                  Kunjungi Web ↗
+                </a>
+                <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Landing Page Skinry -->
+          <article class="card card-flush project-card tilt-card spotlight-card project-item" 
+                   data-title="Landing Page Skinry Skincare" 
+                   data-category="frontend" 
+                   data-tags="html css js skincare beauty frontend vercel" 
+                   data-desc="Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis skincare Skinry guna memperkuat pemahaman frontend development.">
+            <div class="project-thumb">
+              <img src="assets/project/Skinry.jpeg" alt="Tangkapan layar Landing Page Skinry" loading="lazy">
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="badge badge-cyan">Frontend</span>
+                <span class="font-mono text-dim" style="font-size:11px;">2026</span>
+              </div>
+              <h2 class="project-title">Landing Page Skinry Care</h2>
+              <p class="project-desc">
+                Tampilan landing page produk kecantikan dan perawatan kulit dengan estetika minimalis, clean typography, dan showcase testimoni pelanggan.
+              </p>
+              <div class="project-tags">
+                <span class="badge">HTML5</span>
+                <span class="badge">CSS3</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">Vercel</span>
+              </div>
+              <div class="project-actions">
+                <a href="https://skinry.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:var(--accent-primary);">
+                  Kunjungi Web ↗
+                </a>
+                <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" class="project-link">
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div id="projects-empty-state" class="empty-state">
+          <div style="font-size:36px; margin-bottom:var(--space-3);">🔍</div>
+          <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-2);">Tidak Ada Proyek yang Cocok</h3>
+          <p style="font-size:var(--text-sm); color:var(--text-muted); margin-bottom:var(--space-6);">
+            Coba gunakan kata kunci pencarian lain atau klik tombol di bawah untuk melihat kembali semua proyek.
+          </p>
+          <button type="button" id="reset-filters-btn" class="btn btn-primary btn-sm">Reset Filter Pencarian</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOTTOM CTA -->
+    <section class="section" style="background:var(--bg-surface); border-top:1px solid var(--border-subtle);">
+      <div class="container" style="text-align:center;">
+        <h2 style="font-size:var(--text-3xl); margin-bottom:var(--space-3);">Tertarik Berkolaborasi dalam Proyek?</h2>
+        <p style="color:var(--text-muted); max-width:540px; margin:0 auto var(--space-6) auto;">
+          Mari diskusikan kebutuhan rekayasa web Anda, mulai dari prototipe hingga aplikasi siap pakai.
         </p>
+        <a href="contact.html" class="btn btn-primary hover-lift">Mulai Diskusi Sekarang →</a>
+      </div>
     </section>
+  </main>
 
-    <section class="section" style="padding-top:16px;">
-        <div class="grid-3">
-
-            <!-- TEFA -->
-            <div class="card no-padding">
-                <div class="project-image-slot">
-                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Tefa.jpeg</p>
-                    <img src="assets/project/Tefa.jpeg" alt="Tangkapan layar Sistem TEFA" onerror="this.style.display='none'">
-                </div>
-                <div class="project-card-inner">
-                    <p class="project-year">Sekarang</p>
-                    <h3 class="project-title">Sistem Informasi TEFA Sekolah</h3>
-                    <p class="project-desc">Membangun sistem informasi Teaching Factory (TEFA) sekolah berbasis web secara tim untuk mengelola alur kerja, layanan, serta produk/jasa di setiap jurusan. (Desain UI/UX)</p>
-                    <div class="project-tags"><span class="badge">Laravel</span></div>
-                    <a href="https://github.com/Varraaa" target="_blank" rel="noopener" class="project-link">
-                        Kunjungi Web
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Booking Pesawat -->
-            <div class="card no-padding">
-                <div class="project-image-slot">
-                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Clouds.jpeg</p>
-                    <img src="assets/project/Clouds.jpeg" alt="Tangkapan layar Web Booking Pesawat" onerror="this.style.display='none'">
-                </div>
-                <div class="project-card-inner">
-                    <p class="project-year">2026</p>
-                    <h3 class="project-title">Web Booking Pesawat</h3>
-                    <p class="project-desc">Project course BWA: membuat web booking pesawat menggunakan Laravel, Filament, Midtrans, dan Mailtrap.</p>
-                    <div class="project-tags">
-                        <span class="badge">Laravel</span><span class="badge">Filament</span><span class="badge">Midtrans</span>
-                    </div>
-                    <a href="https://github.com/Varraaa" target="_blank" rel="noopener" class="project-link">
-                        Kunjungi Web
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Arsen -->
-            <div class="card no-padding">
-                <div class="project-image-slot">
-                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Arsen.jpeg</p>
-                    <img src="assets/project/Arsen.jpeg" alt="Tangkapan layar Landing Page Arsen" onerror="this.style.display='none'">
-                </div>
-                <div class="project-card-inner">
-                    <p class="project-year">2026</p>
-                    <h3 class="project-title">Landing Page Arsen</h3>
-                    <p class="project-desc">Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis kedai kopi Arsen guna memperkuat pemahaman frontend development.</p>
-                    <div class="project-tags">
-                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
-                    </div>
-                    <a href="https://coffee-arsen.vercel.app/" target="_blank" rel="noopener" class="project-link">
-                        Kunjungi Web
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Zenition -->
-            <div class="card no-padding">
-                <div class="project-image-slot">
-                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Zenition.jpeg</p>
-                    <img src="assets/project/Zenition.jpeg" alt="Tangkapan layar Landing Page Zenition" onerror="this.style.display='none'">
-                </div>
-                <div class="project-card-inner">
-                    <p class="project-year">2026</p>
-                    <h3 class="project-title">Landing Page Zenition</h3>
-                    <p class="project-desc">Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis fashion Zenition guna memperkuat pemahaman frontend development.</p>
-                    <div class="project-tags">
-                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
-                    </div>
-                    <a href="https://zenition.vercel.app/" target="_blank" rel="noopener" class="project-link">
-                        Kunjungi Web
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Skinry -->
-            <div class="card no-padding">
-                <div class="project-image-slot">
-                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/Skinry.jpeg</p>
-                    <img src="assets/project/Skinry.jpeg" alt="Tangkapan layar Landing Page Skinry" onerror="this.style.display='none'">
-                </div>
-                <div class="project-card-inner">
-                    <p class="project-year">2026</p>
-                    <h3 class="project-title">Landing Page Skinry</h3>
-                    <p class="project-desc">Merancang dan mengembangkan simulasi landing page interaktif untuk bisnis skincare Skinry guna memperkuat pemahaman frontend development.</p>
-                    <div class="project-tags">
-                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span>
-                    </div>
-                    <a href="https://skinry.vercel.app/" target="_blank" rel="noopener" class="project-link">
-                        Kunjungi Web
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Kantin Ambu -->
-            <div class="card no-padding">
-                <div class="project-image-slot">
-                    <p class="placeholder-text">Tambahkan screenshot di:<br>assets/project/KantinAmbu.jpeg</p>
-                    <img src="assets/project/KantinAmbu.jpeg" alt="Tangkapan layar Web Kantin Ambu" onerror="this.style.display='none'">
-                </div>
-                <div class="project-card-inner">
-                    <p class="project-year">2025</p>
-                    <h3 class="project-title">Web Kantin Ambu (POS)</h3>
-                    <p class="project-desc">Sistem kasir (POS) kantin berbasis web secara tim untuk proyek Ujikom, mencakup fitur transaksi real-time, manajemen menu, dan laporan keuangan otomatis.</p>
-                    <div class="project-tags">
-                        <span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">JS</span><span class="badge">PHP</span>
-                    </div>
-                    <a href="https://github.com/Varraaa" target="_blank" rel="noopener" class="project-link">
-                        Kunjungi Web
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                    </a>
-                </div>
-            </div>
-
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="navbar-brand" style="margin-bottom:var(--space-3);">
+            <span>M Rafi Hibatulloh</span>
+            <span class="brand-badge">Full-Stack Aspirant</span>
+          </div>
+          <p style="font-size:var(--text-sm); color:var(--text-muted); max-width:380px;">
+            Siswa Rekayasa Perangkat Lunak SMKN 1 Katapang. Berfokus pada pengembangan produk web yang fungsional, bersih, dan berorientasi pengguna.
+          </p>
         </div>
-    </section>
 
-    <!-- CTA penutup -->
-    <section class="cta-band" style="margin-top:40px;">
-        <div class="cta-band-inner">
-            <h2>Ada project yang ingin didiskusikan?</h2>
-            <a href="contact.html" class="btn btn-primary on-dark mt-8">Hubungi Saya →</a>
-        </div>
-    </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div>
-                <p class="footer-name">M Rafi Hibatulloh</p>
-                <p class="footer-role">Aspiring Web Developer</p>
+        <div style="display:flex; gap:var(--space-10); flex-wrap:wrap;">
+          <div>
+            <p style="font-size:var(--text-xs); font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:var(--space-3); text-transform:uppercase;">Navigasi</p>
+            <div style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <a href="index.html" style="color:var(--text-secondary);">Home</a>
+              <a href="projects.html" style="color:var(--text-secondary);">Projects Directory</a>
+              <a href="project-detail.html" style="color:var(--text-secondary);">Technical Case Study</a>
+              <a href="about.html" style="color:var(--text-secondary);">About & Philosophy</a>
+              <a href="contact.html" style="color:var(--text-secondary);">Contact</a>
             </div>
-            <div class="footer-links">
-                <a href="mailto:mrafi.hiba@gmail.com" target="_blank">Email</a>
-                <a href="https://wa.me/6281297577567" target="_blank">WhatsApp</a>
-                <a href="https://github.com/Varraaa" target="_blank">GitHub</a>
+          </div>
+
+          <div>
+            <p style="font-size:var(--text-xs); font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:var(--space-3); text-transform:uppercase;">Kontak</p>
+            <div style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <a href="mailto:mrafi.hiba@gmail.com" style="color:var(--text-secondary);">mrafi.hiba@gmail.com</a>
+              <a href="https://wa.me/6281297577567" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);">WhatsApp Direct</a>
+              <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);">GitHub Profile</a>
             </div>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> M Rafi Hibatulloh.</p>
-            <p>Terima kasih sudah berkunjung 👋</p>
-        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> M Rafi Hibatulloh. Semua Hak Cipta Dilindungi.</p>
+        <p class="font-mono">High-Performance Clean Web Architecture</p>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<script src="js/script.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/projects.js"></script>
 </body>
 </html>

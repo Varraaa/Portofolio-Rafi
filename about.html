@@ -1,175 +1,422 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tentang Saya — M Rafi Hibatulloh</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Saya &amp; Filosofi Rekayasa — M Rafi Hibatulloh</title>
+  <meta name="description" content="Perjalanan teknis, filosofi rekayasa perangkat lunak, matriks keahlian, pendidikan, dan sertifikasi M Rafi Hibatulloh.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAVBAR  -->
-<header class="navbar">
-    <div class="navbar-inner">
-        <a href="index.html" class="navbar-logo">M Rafi<span class="accent">.dev</span></a>
+  <!-- STICKY GLASS NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <span>M Rafi</span>
+        <span class="brand-badge">dev.v2</span>
+      </a>
 
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+      <nav class="nav-links" aria-label="Navigasi Utama">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="projects.html" class="nav-item">Projects</a>
+        <a href="project-detail.html" class="nav-item">Case Study</a>
+        <a href="about.html" class="nav-item active">About</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </nav>
 
-        <a href="contact.html" class="navbar-cta">Contact Me →</a>
-
-        <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+      <div class="nav-actions">
+        <button type="button" class="cmd-k-trigger" aria-label="Buka Command Palette">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Cari</span>
+          <kbd class="cmd-k-kbd">Ctrl K</kbd>
         </button>
+
+        <a href="contact.html" class="btn btn-primary btn-sm">Hubungi Saya →</a>
+
+        <button id="menu-toggle" class="mobile-toggle" aria-label="Buka Menu Mobile" aria-expanded="false">
+          &#9776;
+        </button>
+      </div>
     </div>
+  </header>
 
-    <div id="mobile-menu" class="mobile-menu">
-        <div class="container">
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </div>
-    </div>
-</header>
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <a href="index.html" class="mobile-nav-link">
+      <span>Home</span>
+      <span class="font-mono" style="font-size:11px;">01</span>
+    </a>
+    <a href="projects.html" class="mobile-nav-link">
+      <span>Projects Directory</span>
+      <span class="font-mono" style="font-size:11px;">02</span>
+    </a>
+    <a href="project-detail.html" class="mobile-nav-link">
+      <span>Technical Case Study</span>
+      <span class="font-mono" style="font-size:11px;">03</span>
+    </a>
+    <a href="about.html" class="mobile-nav-link active">
+      <span>About & Philosophy</span>
+      <span class="font-mono" style="font-size:11px;">04</span>
+    </a>
+    <a href="contact.html" class="mobile-nav-link">
+      <span>Contact</span>
+      <span class="font-mono" style="font-size:11px;">05</span>
+    </a>
+  </div>
 
-<main>
-
-<!-- HEADER -->
-    <section class="about-header">
-
-        <div>
-            <h1 class="section-heading">Tentang Saya</h1>
-
-            <div class="profile-photo">
-                <img src="assets/jas.jpeg" alt="Foto M Rafi Hibatulloh">
+  <main>
+    <!-- ABOUT HERO HEADER -->
+    <section class="section" style="padding-bottom:var(--space-12);">
+      <div class="container">
+        <div class="about-hero-grid reveal">
+          <!-- Portrait Frame -->
+          <div>
+            <div class="about-portrait-frame tilt-card spotlight-card">
+              <img src="assets/jas.jpeg" alt="Foto Resmi M Rafi Hibatulloh" loading="eager">
             </div>
-
-            <div class="contact-mini">
-                <p>📍 Soreang, Kab. Bandung 49012</p>
-                <p>📞 +62 812-8757-7567</p>
-                <p>✉️ mrafi.hiba@gmail.com</p>
+            <div class="card" style="margin-top:var(--space-4); padding:var(--space-4); font-size:var(--text-xs);">
+              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                <span class="status-dot-active"></span>
+                <span style="font-weight:600; color:var(--text-primary);">Status Terkini:</span>
+              </div>
+              <p style="color:var(--text-secondary); margin:0;">Siswa RPL SMKN 1 Katapang (Angkatan 2024-2027), terbuka untuk tawaran magang.</p>
             </div>
-        </div>
+          </div>
 
-        <div>
-            <p class="bio-text">
-                Pengembang Web Developer dengan keahlian utama pada teknologi HTML, CSS,
-                JavaScript, PHP, dan Laravel. Berpengalaman membangun berbagai proyek aplikasi
-                web secara mandiri maupun kolaboratif, dibekali sertifikasi/pelatihan dari
-                Dicoding dan BWA, untuk memberikan solusi digital yang fungsional dan efisien.
+          <!-- Bio & Background -->
+          <div>
+            <span class="section-kicker">Profil Rekayasa</span>
+            <h1 class="section-title" style="font-size:var(--text-4xl);">M Rafi Hibatulloh</h1>
+            <p style="font-size:var(--text-lg); color:var(--accent-primary); font-weight:600; margin-bottom:var(--space-4);">
+              Web Developer &amp; Rekayasa Perangkat Lunak
             </p>
-            <p class="bio-text">
-                Selain itu, saya juga terbiasa bekerja menggunakan workflow kombinasi antara
-                Stitch dan Figma untuk merancang desain UI/UX antarmuka yang
-                ramah pengguna.
+
+            <p style="margin-bottom:var(--space-4); font-size:var(--text-base);">
+              Saya adalah seorang pengembang web dengan spesialisasi pada <strong>HTML5 Semantik</strong>, <strong>CSS3 Modern</strong>, <strong>JavaScript (ES6+)</strong>, <strong>PHP</strong>, dan framework <strong>Laravel</strong>. Berdomisili di Soreang, Kabupaten Bandung, saya terbiasa memecahkan masalah nyata melalui perangkat lunak yang terstruktur, efisien, dan ramah pengguna.
             </p>
 
-<!-- SKILLS  -->
-            <div class="skills-block">
-                <h2>Keahlian</h2>
+            <p style="margin-bottom:var(--space-6); font-size:var(--text-base);">
+              Selain pengkodean murni, saya menggabungkan workflow desain antarmuka menggunakan <strong>Figma</strong> dan <strong>Stitch</strong> guna menghasilkan desain UI/UX yang tidak hanya menarik secara visual, tetapi juga intuitif bagi pengguna serta teroptimasi untuk performa web berstandar 60 FPS.
+            </p>
 
-                <div class="skill-row">
-                    <div class="skill-labels"><span>HTML</span><span class="level">Midle</span></div>
-                    <div class="skill-track"><div class="skill-fill" style="width:65%"></div></div>
-                </div>
-                <div class="skill-row">
-                    <div class="skill-labels"><span>CSS</span><span class="level">Midle</span></div>
-                    <div class="skill-track"><div class="skill-fill" style="width:65%"></div></div>
-                </div>
-                <div class="skill-row">
-                    <div class="skill-labels"><span>Laravel</span><span class="level">Beginner</span></div>
-                    <div class="skill-track"><div class="skill-fill" style="width:35%"></div></div>
-                </div>
-                <div class="skill-row">
-                    <div class="skill-labels"><span>JavaScript</span><span class="level">Beginner</span></div>
-                    <div class="skill-track"><div class="skill-fill" style="width:35%"></div></div>
-                </div>
-                <div class="skill-row">
-                    <div class="skill-labels"><span>PHP</span><span class="level">Beginner</span></div>
-                    <div class="skill-track"><div class="skill-fill" style="width:35%"></div></div>
-                </div>
+            <div style="display:flex; gap:var(--space-4); flex-wrap:wrap;">
+              <a href="contact.html" class="btn btn-primary hover-lift">Ajak Kolaborasi →</a>
+              <button type="button" class="btn btn-secondary" onclick="window.showToast('Curriculum Vitae siap diunduh saat diminta!');">
+                Unduh Resume (PDF)
+              </button>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-<!-- EDUCATION  -->
-    <section class="section-surface">
-        <div class="section">
-            <h2 class="section-heading" style="margin-bottom:40px;">Pendidikan</h2>
-
-            <div class="timeline">
-                <div class="timeline-item active">
-                    <p class="timeline-date">2024 — Sekarang</p>
-                    <h3 class="timeline-title">Rekayasa Perangkat Lunak</h3>
-                    <p class="timeline-sub">SMKN 1 Katapang</p>
-                </div>
-                <div class="timeline-item">
-                    <p class="timeline-date">2021 — 2024</p>
-                    <h3 class="timeline-title">Sekolah Menengah Pertama</h3>
-                    <p class="timeline-sub">SMPN 1 Soreang</p>
-                </div>
-            </div>
+    <!-- ENGINEERING PHILOSOPHY -->
+    <section class="section" style="background:var(--bg-surface); border-top:1px solid var(--border-subtle); border-bottom:1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-head text-center" style="text-align:center;">
+          <span class="section-kicker">Prinsip Kerja</span>
+          <h2 class="section-title">Filosofi Rekayasa Perangkat Lunak</h2>
+          <p class="section-subtitle" style="margin:0 auto;">
+            Empat pilar utama yang mendasari setiap baris kode dan keputusan arsitektur yang saya ambil.
+          </p>
         </div>
+
+        <div class="grid-4" style="margin-top:var(--space-8);">
+          <div class="card reveal">
+            <span style="font-size:24px; display:block; margin-bottom:var(--space-2);">🧼</span>
+            <h3 style="font-size:var(--text-base); margin-bottom:var(--space-2); color:var(--accent-primary);">Clean &amp; Readable Code</h3>
+            <p style="font-size:var(--text-xs); color:var(--text-muted);">
+              Kode ditulis agar mudah dipahami oleh manusia, modular, dan mematuhi konvensi industri sehingga mudah dirawat dalam jangka panjang.
+            </p>
+          </div>
+
+          <div class="card reveal reveal-delay-1">
+            <span style="font-size:24px; display:block; margin-bottom:var(--space-2);">⚡</span>
+            <h3 style="font-size:var(--text-base); margin-bottom:var(--space-2); color:var(--accent-emerald);">Performance-First</h3>
+            <p style="font-size:var(--text-xs); color:var(--text-muted);">
+              Menghindari dependensi berlebih. Memaksimalkan fitur native HTML5, CSS3, dan Vanilla JS untuk rendering instan 60 FPS.
+            </p>
+          </div>
+
+          <div class="card reveal reveal-delay-2">
+            <span style="font-size:24px; display:block; margin-bottom:var(--space-2);">🎯</span>
+            <h3 style="font-size:var(--text-base); margin-bottom:var(--space-2); color:var(--accent-secondary);">User-Centric Architecture</h3>
+            <p style="font-size:var(--text-xs); color:var(--text-muted);">
+              Desain visual dan struktur navigasi selalu berakar pada kemudahan pengguna akhir, kecepatan proses, dan aksesibilitas ramah keyboard.
+            </p>
+          </div>
+
+          <div class="card reveal reveal-delay-3">
+            <span style="font-size:24px; display:block; margin-bottom:var(--space-2);">🚀</span>
+            <h3 style="font-size:var(--text-base); margin-bottom:var(--space-2); color:var(--accent-amber);">Continuous Improvement</h3>
+            <p style="font-size:var(--text-xs); color:var(--text-muted);">
+              Terus memperdalam pemahaman standar web modern, praktik keamanan database, dan integrasi API terkini lewat course bereputasi.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
-<!-- TRAINING / PELATIHAN  -->
+    <!-- SKILLS MATRIX -->
     <section class="section">
-        <h2 class="section-heading" style="margin-bottom:40px;">Pelatihan &amp; Sertifikasi</h2>
-
-        <div class="grid-3">
-            <div class="card">
-                <p class="training-year">2026</p>
-                <h3 class="training-title">Course BWA</h3>
-                <p class="training-desc">Mengikuti course pembuatan web booking pesawat. Tech stack yang digunakan: Laravel, Midtrans, Filament, dll.</p>
-            </div>
-            <div class="card">
-                <p class="training-year">2026</p>
-                <h3 class="training-title">Dicoding x DBS Foundation</h3>
-                <p class="training-desc">Mengikuti beberapa course online: dasar pemrograman web, frontend, dan dasar pemrograman JavaScript.</p>
-            </div>
-            <div class="card">
-                <p class="training-year">2026</p>
-                <h3 class="training-title">Dicoding x PIJAK</h3>
-                <p class="training-desc">Mengikuti pembelajaran online tentang konsep dasar Artificial Intelligence (AI) serta pemanfaatannya di teknologi.</p>
-            </div>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-kicker">Keahlian Teknis</span>
+          <h2 class="section-title">Matriks Keahlian &amp; Ekosistem</h2>
+          <p class="section-subtitle">
+            Tingkat penguasaan instrumen pengembangan software dan pengalaman praktis dalam proyek.
+          </p>
         </div>
+
+        <div class="skills-matrix-grid">
+          <!-- Column 1: Frontend -->
+          <div class="skill-category-card reveal">
+            <h3 style="font-size:var(--text-lg); margin-bottom:var(--space-4); display:flex; align-items:center; gap:8px;">
+              <span style="color:var(--accent-primary);">🎨</span> Frontend Engineering
+            </h3>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>HTML5 Semantik &amp; SEO</span>
+                <span class="font-mono text-dim">Lanjutan</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:85%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>CSS3 (Flexbox, Grid, Tokens)</span>
+                <span class="font-mono text-dim">Lanjutan</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:85%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>JavaScript Modern (ES6+)</span>
+                <span class="font-mono text-dim">Menengah</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:65%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>UI/UX Prototyping (Figma)</span>
+                <span class="font-mono text-dim">Menengah</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:70%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Column 2: Backend -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <h3 style="font-size:var(--text-lg); margin-bottom:var(--space-4); display:flex; align-items:center; gap:8px;">
+              <span style="color:var(--accent-secondary);">⚙️</span> Backend &amp; Database
+            </h3>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>PHP 8.x Native</span>
+                <span class="font-mono text-dim">Menengah</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:60%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>Laravel Framework (MVC)</span>
+                <span class="font-mono text-dim">Menengah</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:65%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>MySQL / Perancangan ERD</span>
+                <span class="font-mono text-dim">Menengah</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:65%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>RESTful API Integration</span>
+                <span class="font-mono text-dim">Dasar</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:50%;"></div></div>
+            </div>
+          </div>
+
+          <!-- Column 3: Workflow -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <h3 style="font-size:var(--text-lg); margin-bottom:var(--space-4); display:flex; align-items:center; gap:8px;">
+              <span style="color:var(--accent-emerald);">🛠️</span> Tools &amp; Delivery
+            </h3>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>Git &amp; GitHub Versioning</span>
+                <span class="font-mono text-dim">Menengah</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:70%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>Composer Package Manager</span>
+                <span class="font-mono text-dim">Menengah</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:65%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>Vercel Cloud Deployment</span>
+                <span class="font-mono text-dim">Menengah</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:75%;"></div></div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header-row">
+                <span>Postman API Testing</span>
+                <span class="font-mono text-dim">Dasar</span>
+              </div>
+              <div class="skill-track"><div class="skill-bar-fill" style="width:50%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-</main>
+    <!-- EDUCATION TIMELINE & CERTIFICATIONS -->
+    <section class="section" style="background:var(--bg-surface); border-top:1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="grid-2" style="gap:var(--space-12);">
+          
+          <!-- Education Timeline -->
+          <div class="reveal">
+            <span class="section-kicker">Riwayat Akademis</span>
+            <h2 class="section-title">Pendidikan Formal</h2>
+            
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-bullet"></div>
+                <p class="timeline-date">2024 — Sekarang (Aktif)</p>
+                <h3 class="timeline-title">SMKN 1 Katapang</h3>
+                <p class="timeline-subtitle">Kompetensi Keahlian: Rekayasa Perangkat Lunak (RPL)</p>
+                <p style="font-size:var(--text-xs); color:var(--text-muted); margin-top:6px;">
+                  Fokus pada pemodelan perangkat lunak, pemrograman berorientasi objek (OOP), basis data relasional, dan pengembangan proyek TEFA sekolah.
+                </p>
+              </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div>
-                <p class="footer-name">M Rafi Hibatulloh</p>
-                <p class="footer-role">Aspiring Web Developer</p>
+              <div class="timeline-item">
+                <div class="timeline-bullet" style="background:var(--text-dim); box-shadow:none;"></div>
+                <p class="timeline-date">2021 — 2024 (Lulus)</p>
+                <h3 class="timeline-title">SMPN 1 Soreang</h3>
+                <p class="timeline-subtitle">Pendidikan Sekolah Menengah Pertama</p>
+              </div>
             </div>
-            <div class="footer-links">
-                <a href="mailto:mrafi.hiba@gmail.com" target="_blank">Email</a>
-                <a href="https://wa.me/6281297577567" target="_blank">WhatsApp</a>
-                <a href="https://github.com/Varraaa" target="_blank">GitHub</a>
+          </div>
+
+          <!-- Certifications & Training -->
+          <div class="reveal reveal-delay-1">
+            <span class="section-kicker">Sertifikasi &amp; Pelatihan</span>
+            <h2 class="section-title">Program Sertifikasi</h2>
+
+            <div style="display:flex; flex-direction:column; gap:var(--space-4); margin-top:var(--space-6);">
+              <div class="card tilt-card spotlight-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                  <h3 style="font-size:var(--text-base); color:var(--accent-primary);">Full-Stack Web Booking — BWA</h3>
+                  <span class="badge badge-cyan">2026</span>
+                </div>
+                <p style="font-size:var(--text-xs); color:var(--text-muted);">
+                  Praktek intensif perancangan platform reservasi tiket penerbangan menggunakan Laravel 11, Filament Admin, Midtrans Gateway, dan Mailtrap.
+                </p>
+              </div>
+
+              <div class="card tilt-card spotlight-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                  <h3 style="font-size:var(--text-base); color:var(--accent-indigo);">Dicoding x DBS Foundation</h3>
+                  <span class="badge badge-indigo">2026</span>
+                </div>
+                <p style="font-size:var(--text-xs); color:var(--text-muted);">
+                  Penyelesaian modul kompetensi: Dasar Pemrograman Web, Pemrograman Web Lanjutan, dan Dasar Pemrograman JavaScript.
+                </p>
+              </div>
+
+              <div class="card tilt-card spotlight-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                  <h3 style="font-size:var(--text-base); color:var(--accent-emerald);">Dicoding x PIJAK — AI Fundamentals</h3>
+                  <span class="badge badge-emerald">2026</span>
+                </div>
+                <p style="font-size:var(--text-xs); color:var(--text-muted);">
+                  Studi pemahaman konsep dasar Artificial Intelligence (AI) serta penerapannya dalam otomasi ekosistem teknologi modern.
+                </p>
+              </div>
             </div>
+          </div>
+
         </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> M Rafi Hibatulloh.</p>
-            <p>Terima kasih sudah berkunjung 👋</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="navbar-brand" style="margin-bottom:var(--space-3);">
+            <span>M Rafi Hibatulloh</span>
+            <span class="brand-badge">Full-Stack Aspirant</span>
+          </div>
+          <p style="font-size:var(--text-sm); color:var(--text-muted); max-width:380px;">
+            Siswa Rekayasa Perangkat Lunak SMKN 1 Katapang. Berkomitmen menghadirkan produk web yang bersih, cepat, dan fungsional.
+          </p>
         </div>
+
+        <div style="display:flex; gap:var(--space-10); flex-wrap:wrap;">
+          <div>
+            <p style="font-size:var(--text-xs); font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:var(--space-3); text-transform:uppercase;">Navigasi</p>
+            <div style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <a href="index.html" style="color:var(--text-secondary);">Home</a>
+              <a href="projects.html" style="color:var(--text-secondary);">Projects Directory</a>
+              <a href="project-detail.html" style="color:var(--text-secondary);">Technical Case Study</a>
+              <a href="about.html" style="color:var(--text-secondary);">About & Philosophy</a>
+              <a href="contact.html" style="color:var(--text-secondary);">Contact</a>
+            </div>
+          </div>
+
+          <div>
+            <p style="font-size:var(--text-xs); font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:var(--space-3); text-transform:uppercase;">Kontak</p>
+            <div style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <a href="mailto:mrafi.hiba@gmail.com" style="color:var(--text-secondary);">mrafi.hiba@gmail.com</a>
+              <a href="https://wa.me/6281297577567" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);">WhatsApp</a>
+              <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> M Rafi Hibatulloh. Semua Hak Cipta Dilindungi.</p>
+        <p class="font-mono">Clean Code • Modular • Performance-First</p>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<script src="js/script.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
 </body>
 </html>

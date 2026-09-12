@@ -1,164 +1,398 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kontak — M Rafi Hibatulloh</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Saya — M Rafi Hibatulloh</title>
+  <meta name="description" content="Kirim pesan langsung ke M Rafi Hibatulloh untuk peluang magang, proyek web development, atau kolaborasi rekayasa perangkat lunak.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- NAVBAR  -->
-<header class="navbar">
-    <div class="navbar-inner">
-        <a href="index.html" class="navbar-logo">M Rafi<span class="accent">.dev</span></a>
+  <!-- STICKY GLASS NAVBAR -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="navbar-brand">
+        <span>M Rafi</span>
+        <span class="brand-badge">dev.v2</span>
+      </a>
 
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html" class="active">Contact</a>
-        </nav>
+      <nav class="nav-links" aria-label="Navigasi Utama">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="projects.html" class="nav-item">Projects</a>
+        <a href="project-detail.html" class="nav-item">Case Study</a>
+        <a href="about.html" class="nav-item">About</a>
+        <a href="contact.html" class="nav-item active">Contact</a>
+      </nav>
 
-        <a href="contact.html" class="navbar-cta">Contact Me →</a>
-
-        <button id="menu-toggle" class="menu-toggle" aria-label="Buka menu" aria-expanded="false">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+      <div class="nav-actions">
+        <button type="button" class="cmd-k-trigger" aria-label="Buka Command Palette">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Cari</span>
+          <kbd class="cmd-k-kbd">Ctrl K</kbd>
         </button>
+
+        <a href="contact.html" class="btn btn-primary btn-sm">Hubungi Saya →</a>
+
+        <button id="menu-toggle" class="mobile-toggle" aria-label="Buka Menu Mobile" aria-expanded="false">
+          &#9776;
+        </button>
+      </div>
     </div>
+  </header>
 
-    <div id="mobile-menu" class="mobile-menu">
-        <div class="container">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html" class="active">Contact</a>
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <a href="index.html" class="mobile-nav-link">
+      <span>Home</span>
+      <span class="font-mono" style="font-size:11px;">01</span>
+    </a>
+    <a href="projects.html" class="mobile-nav-link">
+      <span>Projects Directory</span>
+      <span class="font-mono" style="font-size:11px;">02</span>
+    </a>
+    <a href="project-detail.html" class="mobile-nav-link">
+      <span>Technical Case Study</span>
+      <span class="font-mono" style="font-size:11px;">03</span>
+    </a>
+    <a href="about.html" class="mobile-nav-link">
+      <span>About & Philosophy</span>
+      <span class="font-mono" style="font-size:11px;">04</span>
+    </a>
+    <a href="contact.html" class="mobile-nav-link active">
+      <span>Contact</span>
+      <span class="font-mono" style="font-size:11px;">05</span>
+    </a>
+  </div>
+
+  <main>
+    <!-- CONTACT HEADER -->
+    <section class="section" style="padding-bottom:var(--space-8);">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-kicker">Komunikasi &amp; Kolaborasi</span>
+          <h1 class="section-title" style="font-size:var(--text-4xl);">Mari Mulai Percakapan</h1>
+          <p class="section-subtitle">
+            Punya tawaran magang, kebutuhan pembuatan website, atau sekadar ingin bertukar ide seputar teknologi web? Saya akan merespons secepat mungkin.
+          </p>
         </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CHANNELS & INTERACTIVE FORM -->
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <div class="contact-layout">
+          
+          <!-- Column 1: Direct Channels -->
+          <div class="reveal">
+            <h2 style="font-size:var(--text-xl); margin-bottom:var(--space-6);">Saluran Langsung</h2>
+
+            <div class="contact-channels">
+              <!-- WhatsApp -->
+              <a href="https://wa.me/6281297577567" target="_blank" rel="noopener noreferrer" class="contact-channel-card tilt-card spotlight-card">
+                <div class="channel-icon-box" style="background:var(--accent-emerald-subtle); color:var(--accent-emerald);">
+                  💬
+                </div>
+                <div>
+                  <p style="font-size:var(--text-xs); color:var(--text-dim); text-transform:uppercase;">Chat Cepat WhatsApp</p>
+                  <p style="font-size:var(--text-base); font-weight:700; color:var(--text-primary); margin-top:2px;">+62 812-9757-7567</p>
+                  <p style="font-size:11px; color:var(--accent-emerald);">● Aktif Setiap Hari</p>
+                </div>
+              </a>
+
+              <!-- Email -->
+              <div class="contact-channel-card tilt-card spotlight-card" style="cursor:pointer;" onclick="navigator.clipboard.writeText('mrafi.hiba@gmail.com'); window.showToast('Email mrafi.hiba@gmail.com disalin!');">
+                <div class="channel-icon-box" style="background:var(--accent-primary-subtle); color:var(--accent-primary);">
+                  ✉️
+                </div>
+                <div style="flex-grow:1;">
+                  <p style="font-size:var(--text-xs); color:var(--text-dim); text-transform:uppercase;">Surat Elektronik (Email)</p>
+                  <p style="font-size:var(--text-base); font-weight:700; color:var(--text-primary); margin-top:2px;">mrafi.hiba@gmail.com</p>
+                  <p style="font-size:11px; color:var(--text-muted);">Klik untuk salin ke clipboard</p>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-channel-card tilt-card spotlight-card">
+                <div class="channel-icon-box" style="background:rgba(251, 191, 36, 0.12); color:var(--accent-amber);">
+                  📍
+                </div>
+                <div>
+                  <p style="font-size:var(--text-xs); color:var(--text-dim); text-transform:uppercase;">Lokasi Domisili</p>
+                  <p style="font-size:var(--text-base); font-weight:700; color:var(--text-primary); margin-top:2px;">Soreang, Kab. Bandung 49012</p>
+                  <p style="font-size:11px; color:var(--text-muted);">Jawa Barat, Indonesia</p>
+                </div>
+              </div>
+
+              <!-- Social Links Row -->
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:var(--space-3); margin-top:var(--space-2);">
+                <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="justify-content:flex-start; padding:10px 14px;">
+                  <span>🐙</span> GitHub Profile
+                </a>
+                <a href="https://www.instagram.com/_vaarra/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" style="justify-content:flex-start; padding:10px 14px;">
+                  <span>📸</span> Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: Interactive Contact Form -->
+          <div class="reveal reveal-delay-1">
+            <h2 style="font-size:var(--text-xl); margin-bottom:var(--space-6);">Formulir Pesan Interaktif</h2>
+
+            <form id="contact-form" class="contact-form" novalidate>
+              <!-- Name Input -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nama Lengkap <span style="color:var(--accent-rose);">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="Masukkan nama Anda..." required minlength="2">
+                <span id="name-error" class="form-error-msg">Silakan masukkan nama Anda minimal 2 karakter.</span>
+              </div>
+
+              <!-- Email Input -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Alamat Email <span style="color:var(--accent-rose);">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="nama@domain.com" required>
+                <span id="email-error" class="form-error-msg">Format alamat email tidak valid.</span>
+              </div>
+
+              <!-- Subject Selection -->
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Tujuan / Kategori <span style="color:var(--accent-rose);">*</span></label>
+                <select id="contact-subject" name="subject" class="form-input" style="background:#0d1424; cursor:pointer;" required>
+                  <option value="" disabled selected>Pilih kategori keperluan...</option>
+                  <option value="Tawaran Magang (Internship)">Tawaran Magang (Internship RPL)</option>
+                  <option value="Proyek Web Development">Kebutuhan Proyek Web (Landing Page / Web App)</option>
+                  <option value="Peluang Kerja Junior">Peluang Kerja Junior Web Developer</option>
+                  <option value="Kolaborasi & Diskusi Teknis">Kolaborasi &amp; Pertanyaan Lain</option>
+                </select>
+                <span id="subject-error" class="form-error-msg">Silakan pilih kategori keperluan.</span>
+              </div>
+
+              <!-- Message Input with Character Count -->
+              <div class="form-group">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <label for="contact-message" class="form-label">Pesan / Detail Kebutuhan <span style="color:var(--accent-rose);">*</span></label>
+                  <span id="char-count" class="char-counter">0 / 500</span>
+                </div>
+                <textarea id="contact-message" name="message" rows="5" class="form-textarea" placeholder="Jelaskan kebutuhan atau pesan Anda secara ringkas..." required minlength="10" maxlength="500"></textarea>
+                <span id="message-error" class="form-error-msg">Pesan harus memiliki panjang minimal 10 karakter.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submit-btn" class="btn btn-primary hover-lift" style="width:100%; padding:14px;">
+                <span id="btn-text">Kirim Pesan Sekarang</span>
+                <span class="hover-arrow-icon">→</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONFIRMATION MODAL DIALOG -->
+  <div id="confirmation-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-icon-circle">✓</div>
+      <h3 id="modal-title" class="modal-title">Pesan Berhasil Disiapkan!</h3>
+      <p class="modal-desc">
+        Rincian pesan Anda telah divalidasi dan siap dikirimkan langsung ke kontak saya.
+      </p>
+
+      <div class="modal-summary-box">
+        <p style="margin-bottom:6px;"><strong style="color:var(--accent-primary);">Pengirim:</strong> <span id="summary-name"></span> (<span id="summary-email"></span>)</p>
+        <p style="margin-bottom:6px;"><strong style="color:var(--accent-secondary);">Perihal:</strong> <span id="summary-subject"></span></p>
+        <p><strong style="color:var(--text-muted);">Pesan:</strong> <span id="summary-message" style="color:var(--text-secondary); font-style:italic;"></span></p>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" id="btn-modal-close" class="btn btn-outline btn-sm">Tutup &amp; Reset</button>
+        <a id="btn-modal-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          Teruskan via WhatsApp 💬
+        </a>
+      </div>
     </div>
-</header>
+  </div>
 
-<main>
-
-<!-- HEADER  -->
-    <section class="contact-intro">
-        <h1 class="section-heading">Hubungi Saya</h1>
-        <p>
-            Memiliki kesempatan untuk berkomunikasi? Saya terbuka untuk berkomunikasi,
-            pilih cara yang paling nyaman buat kamu.
-        </p>
-    </section>
-
-<!-- KONTAK UTAMA  -->
-    <section class="section" style="padding-top:0; padding-bottom:56px;">
-        <h2 style="font-family:var(--font-display); font-size:20px; font-weight:600; margin-bottom:24px;">Kontak Langsung</h2>
-
-        <div class="grid-3">
-
-            <a href="https://www.google.com/maps/search/Soreang,+Kab.+Bandung" target="_blank" rel="noopener" class="card">
-                <div class="contact-card-head">
-                    <p class="section-tag" style="margin-bottom:0;">Lokasi</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </div>
-                <p class="contact-value">Soreang, Kab. Bandung, 49012</p>
-                <p class="contact-hint">Buka di Google Maps</p>
-            </a>
-
-            <a href="https://wa.me/6281297577567" target="_blank" rel="noopener" class="card">
-                <div class="contact-card-head">
-                    <p class="section-tag" style="margin-bottom:0;">Telepon</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </div>
-                <p class="contact-value">+62 812-8757-7567</p>
-                <p class="contact-hint">Tap untuk chat WhatsApp</p>
-            </a>
-
-            <a href="mailto:mrafi.hiba@gmail.com" class="card">
-                <div class="contact-card-head">
-                    <p class="section-tag" style="margin-bottom:0;">Email</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </div>
-                <p class="contact-value">mrafi.hiba@gmail.com</p>
-                <p class="contact-hint">Tap untuk kirim email</p>
-            </a>
-
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="navbar-brand" style="margin-bottom:var(--space-3);">
+            <span>M Rafi Hibatulloh</span>
+            <span class="brand-badge">Full-Stack Aspirant</span>
+          </div>
+          <p style="font-size:var(--text-sm); color:var(--text-muted); max-width:380px;">
+            Siswa Rekayasa Perangkat Lunak SMKN 1 Katapang. Berkomitmen menghadirkan produk web yang bersih, cepat, dan fungsional.
+          </p>
         </div>
-    </section>
 
-<!-- SOCIAL LINKS -->
-    <section class="section-surface">
-        <div class="section">
-            <h2 style="font-family:var(--font-display); font-size:20px; font-weight:600; margin-bottom:24px;">Media Sosial &amp; Portofolio Lain</h2>
-
-            <div class="grid-4">
-                <a href="https://github.com/Varraaa" target="_blank" rel="noopener" class="card social-card">
-                    <span class="social-icon">Gh</span>
-                    <div>
-                        <p class="social-name">GitHub</p>
-                        <p class="social-desc">Source code project</p>
-                    </div>
-                </a>
-
-                <a href="https://www.instagram.com/_vaarra/" target="_blank" rel="noopener" class="card social-card">
-                    <span class="social-icon">Ig</span>
-                    <div>
-                        <p class="social-name">Instagram</p>
-                        <p class="social-desc">Keseharian &amp; update</p>
-                    </div>
-                </a>
-
-                <a href="https://wa.me/6281297577567" target="_blank" rel="noopener" class="card social-card">
-                    <span class="social-icon">Wa</span>
-                    <div>
-                        <p class="social-name">WhatsApp</p>
-                        <p class="social-desc">Chat cepat</p>
-                    </div>
-                </a>
+        <div style="display:flex; gap:var(--space-10); flex-wrap:wrap;">
+          <div>
+            <p style="font-size:var(--text-xs); font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:var(--space-3); text-transform:uppercase;">Navigasi</p>
+            <div style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <a href="index.html" style="color:var(--text-secondary);">Home</a>
+              <a href="projects.html" style="color:var(--text-secondary);">Projects Directory</a>
+              <a href="project-detail.html" style="color:var(--text-secondary);">Technical Case Study</a>
+              <a href="about.html" style="color:var(--text-secondary);">About & Philosophy</a>
+              <a href="contact.html" style="color:var(--text-secondary);">Contact</a>
             </div>
-        </div>
-    </section>
+          </div>
 
-<!-- CTA PENUTUP -->
-    <section class="cta-band">
-        <div class="cta-band-inner">
-            <h2>Yuk, mulai berkomunikasi.</h2>
-            <p>Kirim email atau chat WhatsApp, saya akan balas secepatnya.</p>
-            <div class="cta-actions">
-                <a href="mailto:mrafi.hiba@gmail.com" class="btn btn-primary on-dark">Kirim Email →</a>
-                <a href="https://wa.me/6281297577567" target="_blank" rel="noopener" class="btn btn-secondary on-dark">Chat WhatsApp →</a>
+          <div>
+            <p style="font-size:var(--text-xs); font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:var(--space-3); text-transform:uppercase;">Kontak</p>
+            <div style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <a href="mailto:mrafi.hiba@gmail.com" style="color:var(--text-secondary);">mrafi.hiba@gmail.com</a>
+              <a href="https://wa.me/6281297577567" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);">WhatsApp Direct</a>
+              <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);">GitHub Profile</a>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-</main>
-
-<!-- FOOTER  -->
-<footer class="footer">
-    <div class="footer-inner">
-        <div class="footer-top">
-            <div>
-                <p class="footer-name">M Rafi Hibatulloh</p>
-                <p class="footer-role">Aspiring Web Developer</p>
-            </div>
-            <div class="footer-links">
-                <a href="mailto:mrafi.hiba@gmail.com" target="_blank">Email</a>
-                <a href="https://wa.me/6281297577567" target="_blank">WhatsApp</a>
-                <a href="https://github.com/Varraaa" target="_blank">GitHub</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; <span id="year"></span> M Rafi Hibatulloh.</p>
-            <p>Terima kasih sudah berkunjung 👋</p>
-        </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year">2026</span> M Rafi Hibatulloh. Semua Hak Cipta Dilindungi.</p>
+        <p class="font-mono">Real-time Form Validation • Native Zero-Dependency</p>
+      </div>
     </div>
-</footer>
+  </footer>
 
-<script src="js/script.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    // FORM VALIDATION & MODAL CONTROLLER
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contact-form');
+      const nameInput = document.getElementById('contact-name');
+      const emailInput = document.getElementById('contact-email');
+      const subjectInput = document.getElementById('contact-subject');
+      const messageInput = document.getElementById('contact-message');
+      const charCounter = document.getElementById('char-count');
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+
+      // Modal elements
+      const modal = document.getElementById('confirmation-modal');
+      const summaryName = document.getElementById('summary-name');
+      const summaryEmail = document.getElementById('summary-email');
+      const summarySubject = document.getElementById('summary-subject');
+      const summaryMessage = document.getElementById('summary-message');
+      const btnModalClose = document.getElementById('btn-modal-close');
+      const btnModalWhatsApp = document.getElementById('btn-modal-whatsapp');
+
+      // Regex for email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Character Counter
+      messageInput.addEventListener('input', function () {
+        const len = this.value.length;
+        charCounter.textContent = `${len} / 500`;
+        if (len > 450) {
+          charCounter.style.color = 'var(--accent-rose)';
+        } else {
+          charCounter.style.color = 'var(--text-dim)';
+        }
+      });
+
+      function validateField(input, condition, errorEl) {
+        if (condition) {
+          input.classList.remove('is-invalid');
+          input.classList.add('is-valid');
+          if (errorEl) errorEl.classList.remove('visible');
+          return true;
+        } else {
+          input.classList.remove('is-valid');
+          input.classList.add('is-invalid');
+          if (errorEl) errorEl.classList.add('visible');
+          return false;
+        }
+      }
+
+      // Real-time input listeners
+      nameInput.addEventListener('input', () => {
+        validateField(nameInput, nameInput.value.trim().length >= 2, document.getElementById('name-error'));
+      });
+
+      emailInput.addEventListener('input', () => {
+        validateField(emailInput, emailRegex.test(emailInput.value.trim()), document.getElementById('email-error'));
+      });
+
+      subjectInput.addEventListener('change', () => {
+        validateField(subjectInput, subjectInput.value !== '', document.getElementById('subject-error'));
+      });
+
+      messageInput.addEventListener('input', () => {
+        validateField(messageInput, messageInput.value.trim().length >= 10, document.getElementById('message-error'));
+      });
+
+      // Submit listener
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const isNameValid = validateField(nameInput, nameInput.value.trim().length >= 2, document.getElementById('name-error'));
+        const isEmailValid = validateField(emailInput, emailRegex.test(emailInput.value.trim()), document.getElementById('email-error'));
+        const isSubjectValid = validateField(subjectInput, subjectInput.value !== '', document.getElementById('subject-error'));
+        const isMessageValid = validateField(messageInput, messageInput.value.trim().length >= 10, document.getElementById('message-error'));
+
+        if (isNameValid && isEmailValid && isSubjectValid && isMessageValid) {
+          // Simulate loading state
+          submitBtn.disabled = true;
+          btnText.textContent = 'Memproses...';
+
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            btnText.textContent = 'Kirim Pesan Sekarang';
+
+            // Populate modal summary
+            summaryName.textContent = nameInput.value.trim();
+            summaryEmail.textContent = emailInput.value.trim();
+            summarySubject.textContent = subjectInput.value;
+            summaryMessage.textContent = `"${messageInput.value.trim()}"`;
+
+            // Prepare WhatsApp direct link
+            const waText = encodeURIComponent(
+              `Halo M Rafi, saya ${nameInput.value.trim()} (${emailInput.value.trim()}).\nPerihal: ${subjectInput.value}\nPesan: ${messageInput.value.trim()}`
+            );
+            btnModalWhatsApp.href = `https://wa.me/6281297577567?text=${waText}`;
+
+            // Open Modal
+            modal.classList.add('open');
+            window.showToast('Pesan berhasil disiapkan!');
+          }, 350);
+        } else {
+          window.showToast('Harap lengkapi semua kolom dengan benar.', 3000);
+        }
+      });
+
+      // Close modal
+      btnModalClose.addEventListener('click', function () {
+        modal.classList.remove('open');
+        form.reset();
+        charCounter.textContent = '0 / 500';
+        [nameInput, emailInput, subjectInput, messageInput].forEach(inp => {
+          inp.classList.remove('is-valid', 'is-invalid');
+        });
+      });
+
+      // Close on backdrop click
+      modal.addEventListener('click', function (e) {
+        if (e.target === modal) {
+          modal.classList.remove('open');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
