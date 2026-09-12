@@ -70,10 +70,10 @@
   const typedEl = document.getElementById('typed-output');
   if (typedEl) {
     const lines = [
-      'M Rafi Hibatulloh',
-      'Junior Full-Stack Web Developer & UI/UX Enthusiast',
-      'Stack: Laravel • PHP • JS (ES6+) • Modern CSS3 • MySQL',
-      'Status: Ready for impactful engineering projects 🚀'
+      'Muhammad Rafi Hibatulloh',
+      'Full-Stack Web Developer',
+      'Stack: Laravel • PHP • JavaScript • Modern CSS • MySQL',
+      'Status: Ready for impactful engineering projects'
     ];
 
     if (prefersReduced) {
@@ -115,4 +115,80 @@
     }
   }
 
+  // --- 4. Interactive Counter Animation (Stats Strip) ---
+  const statValues = document.querySelectorAll('.stat-value[data-counter-target]');
+  if (statValues.length > 0) {
+    function animateCounter(el) {
+      if (el.dataset.animating === 'true') return;
+      el.dataset.animating = 'true';
+      el.classList.remove('stat-counted');
+
+      const target = parseInt(el.getAttribute('data-counter-target'), 10) || 0;
+      const suffix = el.getAttribute('data-counter-suffix') || '';
+      const duration = target > 50 ? 1800 : 1200; // ms
+      let startTime = null;
+
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const elapsed = timestamp - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // easeOutExpo curve for elegant, smooth deceleration
+        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const current = Math.floor(ease * target);
+
+        el.textContent = current + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+          el.dataset.animating = 'false';
+          el.dataset.completed = 'true';
+          el.classList.add('stat-counted');
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    if (!prefersReduced && 'IntersectionObserver' in window) {
+      const statsObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.25
+      });
+
+      statValues.forEach(el => {
+        const suffix = el.getAttribute('data-counter-suffix') || '';
+        el.textContent = '0' + suffix;
+        statsObserver.observe(el);
+      });
+    } else {
+      statValues.forEach(el => {
+        const target = el.getAttribute('data-counter-target');
+        const suffix = el.getAttribute('data-counter-suffix') || '';
+        el.textContent = target + suffix;
+      });
+    }
+
+    // Interactive Re-trigger on Click with Tooltip Feedback
+    statValues.forEach(el => {
+      const parentCard = el.closest('.stat-item');
+      if (parentCard) {
+        parentCard.style.cursor = 'pointer';
+        parentCard.setAttribute('title', 'Klik untuk mengulang animasi');
+        parentCard.addEventListener('click', () => {
+          animateCounter(el);
+        });
+      }
+    });
+  }
+
 })();
+

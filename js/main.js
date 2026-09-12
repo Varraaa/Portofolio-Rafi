@@ -84,12 +84,14 @@
   // --- 5. Command Palette (Ctrl + K / Cmd + K) ---
   const commandData = [
     { label: 'Halaman Utama (Home)', category: 'Navigasi', url: 'index.html', icon: '🏠' },
-    { label: 'Direktori Proyek (Projects)', category: 'Navigasi', url: 'projects.html', icon: '💼' },
-    { label: 'Studi Kasus Teknis (Case Study)', category: 'Navigasi', url: 'project-detail.html', icon: '📑' },
     { label: 'Tentang Saya & Filosofi (About)', category: 'Navigasi', url: 'about.html', icon: '👤' },
+    { label: 'Direktori Proyek (Projects)', category: 'Navigasi', url: 'projects.html', icon: '💼' },
+    { label: 'Sertifikat Resmi (Certificate)', category: 'Navigasi', url: 'certificate.html', icon: '📜' },
     { label: 'Hubungi Saya (Contact)', category: 'Navigasi', url: 'contact.html', icon: '✉️' },
-    { label: 'Kantin Ambu POS Case Study', category: 'Proyek', url: 'project-detail.html?id=kantin-ambu', icon: '☕' },
-    { label: 'Clouds Flight Booking Case Study', category: 'Proyek', url: 'project-detail.html?id=clouds-booking', icon: '✈️' },
+    { label: 'Dicoding x DBS Foundation Certificate', category: 'Sertifikat', url: 'certificate.html', icon: '📜' },
+    { label: 'Dicoding x PIJAK AI Fundamentals Certificate', category: 'Sertifikat', url: 'certificate.html', icon: '🤖' },
+    { label: 'Kantin Ambu POS Proyek', category: 'Proyek', url: 'projects.html', icon: '☕' },
+    { label: 'Clouds Flight Booking Proyek', category: 'Proyek', url: 'projects.html', icon: '✈️' },
     { label: 'Kunjungi GitHub (@Varraaa)', category: 'Tautan Eksternal', external: 'https://github.com/Varraaa', icon: '🐙' },
     { label: 'Kirim WhatsApp (+62 812-9757-7567)', category: 'Tautan Eksternal', external: 'https://wa.me/6281297577567', icon: '💬' },
     { label: 'Salin Email ke Clipboard', category: 'Aksi Cepat', action: 'copy-email', icon: '📋' }
@@ -242,7 +244,6 @@
     }
   });
 
-  // Attach button triggers
   document.querySelectorAll('.cmd-k-trigger').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
@@ -251,5 +252,34 @@
       }
     });
   });
+
+  // --- 6. Footer Local Clock (WIB / UTC+7) ---
+  function updateFooterClock() {
+    const timeEl = document.getElementById('footer-local-time');
+    if (!timeEl) return;
+    const now = new Date();
+    const timeStr = now.toLocaleTimeString('id-ID', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      timeZone: 'Asia/Jakarta'
+    });
+    timeEl.textContent = `${timeStr} WIB`;
+  }
+  updateFooterClock();
+  setInterval(updateFooterClock, 1000);
+
+  // Global Quick Copy Email
+  window.copyEmailToClipboard = function (email = 'mrafi.hiba@gmail.com') {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(() => {
+        window.showToast(`Email ${email} berhasil disalin ke clipboard!`);
+      }).catch(() => {
+        window.showToast(`Email: ${email}`);
+      });
+    } else {
+      window.showToast(`Email: ${email}`);
+    }
+  };
 
 })();

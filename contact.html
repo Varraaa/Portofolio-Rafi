@@ -18,28 +18,18 @@
   <header class="navbar">
     <div class="container navbar-inner">
       <a href="index.html" class="navbar-brand">
-        <span>M Rafi</span>
-        <span class="brand-badge">dev.v2</span>
+        <span>M Rafi.</span>
       </a>
 
       <nav class="nav-links" aria-label="Navigasi Utama">
         <a href="index.html" class="nav-item">Home</a>
-        <a href="projects.html" class="nav-item">Projects</a>
-        <a href="project-detail.html" class="nav-item">Case Study</a>
         <a href="about.html" class="nav-item">About</a>
+        <a href="projects.html" class="nav-item">Projects</a>
+        <a href="certificate.html" class="nav-item">Certificate</a>
         <a href="contact.html" class="nav-item active">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <button type="button" class="cmd-k-trigger" aria-label="Buka Command Palette">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <span>Cari</span>
-          <kbd class="cmd-k-kbd">Ctrl K</kbd>
-        </button>
-
         <a href="contact.html" class="btn btn-primary btn-sm">Hubungi Saya →</a>
 
         <button id="menu-toggle" class="mobile-toggle" aria-label="Buka Menu Mobile" aria-expanded="false">
@@ -55,16 +45,16 @@
       <span>Home</span>
       <span class="font-mono" style="font-size:11px;">01</span>
     </a>
-    <a href="projects.html" class="mobile-nav-link">
-      <span>Projects Directory</span>
+    <a href="about.html" class="mobile-nav-link">
+      <span>About</span>
       <span class="font-mono" style="font-size:11px;">02</span>
     </a>
-    <a href="project-detail.html" class="mobile-nav-link">
-      <span>Technical Case Study</span>
+    <a href="projects.html" class="mobile-nav-link">
+      <span>Projects</span>
       <span class="font-mono" style="font-size:11px;">03</span>
     </a>
-    <a href="about.html" class="mobile-nav-link">
-      <span>About & Philosophy</span>
+    <a href="certificate.html" class="mobile-nav-link">
+      <span>Certificate</span>
       <span class="font-mono" style="font-size:11px;">04</span>
     </a>
     <a href="contact.html" class="mobile-nav-link active">
@@ -228,42 +218,91 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <div>
-          <div class="navbar-brand" style="margin-bottom:var(--space-3);">
-            <span>M Rafi Hibatulloh</span>
-            <span class="brand-badge">Full-Stack Aspirant</span>
-          </div>
-          <p style="font-size:var(--text-sm); color:var(--text-muted); max-width:380px;">
-            Siswa Rekayasa Perangkat Lunak SMKN 1 Katapang. Berkomitmen menghadirkan produk web yang bersih, cepat, dan fungsional.
-          </p>
-        </div>
+        <div class="footer-grid">
 
-        <div style="display:flex; gap:var(--space-10); flex-wrap:wrap;">
+          <!-- Col 1: Brand & Value Profile -->
           <div>
-            <p style="font-size:var(--text-xs); font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:var(--space-3); text-transform:uppercase;">Navigasi</p>
-            <div style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
-              <a href="index.html" style="color:var(--text-secondary);">Home</a>
-              <a href="projects.html" style="color:var(--text-secondary);">Projects Directory</a>
-              <a href="project-detail.html" style="color:var(--text-secondary);">Technical Case Study</a>
-              <a href="about.html" style="color:var(--text-secondary);">About & Philosophy</a>
-              <a href="contact.html" style="color:var(--text-secondary);">Contact</a>
+            <div class="footer-brand-title">
+              <span>Muhammad Rafi Hibatulloh</span>
+              <span class="brand-badge">Full-Stack</span>
+            </div>
+            <p class="footer-desc">
+              Siswa Rekayasa Perangkat Lunak SMKN 1 Katapang berorientasi mutu tinggi. Menggabungkan ketelitian logika backend Laravel/PHP dengan antarmuka web modern 60 FPS untuk menciptakan solusi digital yang andal dan berdampak.
+            </p>
+            <div class="footer-status-pill">
+              <span class="status-dot-active"></span>
+              <span>Terbuka untuk Magang &amp; Peluang Proyek</span>
+            </div>
+            <div class="footer-meta-box">
+              <div class="footer-meta-item">
+                <span>📍</span>
+                <span>Bandung, Indonesia (UTC+7)</span>
+              </div>
+              <div class="footer-meta-item">
+                <span>🕒</span>
+                <span>Waktu Lokal: <span id="footer-local-time">--:-- WIB</span></span>
+              </div>
             </div>
           </div>
 
+          <!-- Col 2: Navigasi Halaman -->
           <div>
-            <p style="font-size:var(--text-xs); font-family:var(--font-mono); color:var(--accent-primary); margin-bottom:var(--space-3); text-transform:uppercase;">Kontak</p>
-            <div style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
-              <a href="mailto:mrafi.hiba@gmail.com" style="color:var(--text-secondary);">mrafi.hiba@gmail.com</a>
-              <a href="https://wa.me/6281297577567" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);">WhatsApp Direct</a>
-              <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" style="color:var(--text-secondary);">GitHub Profile</a>
+            <p class="footer-col-title">Navigasi</p>
+            <div class="footer-links-list">
+              <a href="index.html" class="footer-link"><span>🏠</span> Home</a>
+              <a href="about.html" class="footer-link"><span>👤</span> About</a>
+              <a href="projects.html" class="footer-link"><span>💼</span> Projects</a>
+              <a href="certificate.html" class="footer-link"><span>📜</span> Certificate</a>
+              <a href="contact.html" class="footer-link"><span>✉️</span> Contact</a>
             </div>
           </div>
+
+          <!-- Col 3: Spesialisasi & Stack -->
+          <div>
+            <p class="footer-col-title">Spesialisasi</p>
+            <div class="footer-links-list">
+              <span class="footer-link" style="cursor:default;"><span>⚡</span> Laravel 11 / 13</span>
+              <span class="footer-link" style="cursor:default;"><span>⚙️</span> PHP 8.x &amp; MVC</span>
+              <span class="footer-link" style="cursor:default;"><span>🎨</span> Modern JavaScript</span>
+              <span class="footer-link" style="cursor:default;"><span>🗄️</span> MySQL &amp; Relational</span>
+              <span class="footer-link" style="cursor:default;"><span>🖌️</span> Figma UI/UX Design</span>
+            </div>
+          </div>
+
+          <!-- Col 4: Kontak & Hubungan Profesional -->
+          <div>
+            <p class="footer-col-title">Kontak Langsung</p>
+            <div class="footer-links-list">
+              <a href="mailto:mrafi.hiba@gmail.com" class="footer-link">
+                <span>📧</span> mrafi.hiba@gmail.com
+              </a>
+              <button type="button" class="footer-copy-btn" onclick="window.copyEmailToClipboard('mrafi.hiba@gmail.com')">
+                📋 Salin Email
+              </button>
+              <a href="https://wa.me/6281297577567" target="_blank" rel="noopener noreferrer" class="footer-link" style="margin-top:6px;">
+                <span>💬</span> WhatsApp Direct ↗
+              </a>
+              <a href="https://github.com/Varraaa" target="_blank" rel="noopener noreferrer" class="footer-link">
+                <span>🐙</span> GitHub (@Varraaa) ↗
+              </a>
+              <a href="https://www.instagram.com/_vaarra/" target="_blank" rel="noopener noreferrer" class="footer-link">
+                <span>📸</span> Instagram ↗
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span id="year">2026</span> M Rafi Hibatulloh. Semua Hak Cipta Dilindungi.</p>
-        <p class="font-mono">Real-time Form Validation • Native Zero-Dependency</p>
+        <p>&copy; <span id="year">2026</span> Muhammad Rafi Hibatulloh. Semua Hak Cipta Dilindungi.</p>
+        <p class="font-mono" style="display:flex; align-items:center; gap:8px;">
+          <span style="color:var(--accent-emerald);">●</span>
+          <span>Sistem Berjalan Optimal (60 FPS Native Web)</span>
+        </p>
+        <button type="button" class="back-to-top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Kembali ke atas">
+          ↑ Ke Atas
+        </button>
       </div>
     </div>
   </footer>
