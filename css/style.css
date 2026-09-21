@@ -1773,16 +1773,6 @@ code, pre, .font-mono {
   gap: 8px;
 }
 
-.footer-col-title::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-primary);
-  box-shadow: 0 0 8px var(--accent-primary);
-}
-
 .footer-nav-list {
   display: flex;
   flex-direction: column;
