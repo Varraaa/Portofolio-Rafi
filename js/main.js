@@ -267,13 +267,11 @@
     timeEl.textContent = `${timeStr} WIB`;
   }
   updateFooterClock();
-  setInterval(updateFooterClock, 1000);
-
   // Global Quick Copy Email
   window.copyEmailToClipboard = function (email = 'mrafi.hiba@gmail.com') {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(email).then(() => {
-        window.showToast(`Email ${email} berhasil disalin ke clipboard!`);
+        window.showToast(`Email ${email} berhasil disalin!`);
       }).catch(() => {
         window.showToast(`Email: ${email}`);
       });
@@ -281,5 +279,29 @@
       window.showToast(`Email: ${email}`);
     }
   };
+
+  // --- 7. Floating Back to Top Button Controller ---
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    const handleScroll = function () {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    // Check initial state
+    handleScroll();
+
+    backToTopBtn.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
 
 })();
