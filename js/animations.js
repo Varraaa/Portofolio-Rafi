@@ -73,7 +73,7 @@
       'Muhammad Rafi Hibatulloh',
       'Full-Stack Web Developer',
       'Stack: Laravel • PHP • JavaScript • Modern CSS • MySQL',
-      'Status: Ready for impactful engineering projects'
+      'Status: Terbuka untuk magang & proyek web'
     ];
 
     if (prefersReduced) {
