@@ -1,0 +1,19 @@
+{
+  "name": "M Rafi Hibatulloh — Web Developer Portfolio",
+  "short_name": "Rafi Portfolio",
+  "description": "Portofolio resmi M Rafi Hibatulloh, Web Developer spesialis Laravel, PHP, JavaScript ES6+, dan modern CSS.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#070a13",
+  "theme_color": "#070a13",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/jas.jpeg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
