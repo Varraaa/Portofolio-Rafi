@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hubungi Saya — M Rafi Hibatulloh</title>
   <meta name="description" content="Kirim pesan langsung ke M Rafi Hibatulloh untuk peluang magang, proyek web development, atau kolaborasi pembuatan website.">
+  <meta name="author" content="M Rafi Hibatulloh">
+  <meta name="theme-color" content="#070a13">
+
+  <!-- Open Graph / Social Sharing Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hubungi Saya — M Rafi Hibatulloh">
+  <meta property="og:description" content="Kirim pesan langsung ke M Rafi Hibatulloh untuk peluang magang, proyek web development, atau kolaborasi pembuatan website.">
+  <meta property="og:image" content="assets/jas.jpeg">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hubungi Saya — M Rafi Hibatulloh">
+  <meta name="twitter:description" content="Kirim pesan langsung ke M Rafi Hibatulloh untuk peluang magang, proyek web development, atau kolaborasi pembuatan website.">
+  <meta name="twitter:image" content="assets/jas.jpeg">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -205,11 +223,23 @@
         <p><strong style="color:var(--text-muted);">Pesan:</strong> <span id="summary-message" style="color:var(--text-secondary); font-style:italic;"></span></p>
       </div>
 
-      <div class="modal-actions">
-        <button type="button" id="btn-modal-close" class="btn btn-outline btn-sm">Tutup &amp; Reset</button>
-        <a id="btn-modal-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-          Teruskan via WhatsApp 💬
-        </a>
+      <div class="modal-actions" style="display:flex; flex-direction:column; gap:10px; margin-top:var(--space-4);">
+        <div style="display:flex; gap:8px; width:100%; flex-wrap:wrap;">
+          <a id="btn-modal-whatsapp" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm hover-lift" style="flex:1; justify-content:center; min-width:140px;">
+            Kirim via WhatsApp 💬
+          </a>
+          <a id="btn-modal-email" href="#" class="btn btn-secondary btn-sm hover-lift" style="flex:1; justify-content:center; min-width:140px;">
+            Kirim via Email ✉️
+          </a>
+        </div>
+        <div style="display:flex; gap:8px; width:100%; flex-wrap:wrap;">
+          <button type="button" id="btn-modal-copy" class="btn btn-outline btn-sm" style="flex:1; min-width:140px;">
+            📋 Salin Format Pesan
+          </button>
+          <button type="button" id="btn-modal-close" class="btn btn-outline btn-sm" style="flex:1; min-width:140px;">
+            Tutup
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -399,6 +429,9 @@
       const summaryMessage = document.getElementById('summary-message');
       const btnModalClose = document.getElementById('btn-modal-close');
       const btnModalWhatsApp = document.getElementById('btn-modal-whatsapp');
+      const btnModalEmail = document.getElementById('btn-modal-email');
+      const btnModalCopy = document.getElementById('btn-modal-copy');
+      let currentRawMessage = '';
 
       // Regex for email
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -469,11 +502,21 @@
             summarySubject.textContent = subjectInput.value;
             summaryMessage.textContent = `"${messageInput.value.trim()}"`;
 
+            // Prepare Message Data
+            currentRawMessage = `Halo M Rafi Hibatulloh,\n\nNama: ${nameInput.value.trim()}\nEmail: ${emailInput.value.trim()}\nKeperluan: ${subjectInput.value}\n\nPesan:\n${messageInput.value.trim()}`;
+
             // Prepare WhatsApp direct link
             const waText = encodeURIComponent(
               `Halo M Rafi, saya ${nameInput.value.trim()} (${emailInput.value.trim()}).\nPerihal: ${subjectInput.value}\nPesan: ${messageInput.value.trim()}`
             );
             btnModalWhatsApp.href = `https://wa.me/6281297577567?text=${waText}`;
+
+            // Prepare Email Client direct link
+            const mailSubject = encodeURIComponent(`[Inquiry Portofolio] ${subjectInput.value} - ${nameInput.value.trim()}`);
+            const mailBody = encodeURIComponent(currentRawMessage);
+            if (btnModalEmail) {
+              btnModalEmail.href = `mailto:mrafi.hiba@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+            }
 
             // Open Modal
             modal.classList.add('open');
@@ -483,6 +526,19 @@
           window.showToast('Harap lengkapi semua kolom dengan benar.', 3000);
         }
       });
+
+      // Copy text action
+      if (btnModalCopy) {
+        btnModalCopy.addEventListener('click', function () {
+          if (currentRawMessage && navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(currentRawMessage).then(() => {
+              window.showToast('Teks pesan berhasil disalin ke clipboard!');
+            }).catch(() => {
+              window.showToast('Teks pesan siap dikirim.');
+            });
+          }
+        });
+      }
 
       // Close modal
       btnModalClose.addEventListener('click', function () {

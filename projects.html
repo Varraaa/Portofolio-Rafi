@@ -5,6 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Proyek &amp; Karya — M Rafi Hibatulloh</title>
   <meta name="description" content="Koleksi proyek web development, sistem kasir POS, web booking tiket, dan aplikasi interaktif oleh M Rafi Hibatulloh.">
+  <meta name="author" content="M Rafi Hibatulloh">
+  <meta name="theme-color" content="#070a13">
+
+  <!-- Open Graph / Social Sharing Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Proyek &amp; Karya — M Rafi Hibatulloh">
+  <meta property="og:description" content="Koleksi proyek web development, sistem kasir POS, web booking tiket, dan aplikasi interaktif oleh M Rafi Hibatulloh.">
+  <meta property="og:image" content="assets/project/KantinAmbu.jpeg">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Proyek &amp; Karya — M Rafi Hibatulloh">
+  <meta name="twitter:description" content="Koleksi proyek web development, sistem kasir POS, web booking tiket, dan aplikasi interaktif oleh M Rafi Hibatulloh.">
+  <meta name="twitter:image" content="assets/project/KantinAmbu.jpeg">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -483,6 +501,41 @@
       <path d="m18 15-6-6-6 6"/>
     </svg>
   </button>
+
+  <!-- PROJECT QUICK-VIEW MODAL -->
+  <div id="project-quickview-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="qv-modal-title">
+    <div class="modal-dialog project-qv-dialog">
+      <button type="button" class="project-qv-close" id="qv-modal-close" aria-label="Tutup modal">&times;</button>
+      <div class="project-qv-thumb-wrap">
+        <img id="qv-modal-img" src="" alt="Pratinjau Proyek">
+        <span id="qv-modal-badge" class="badge badge-cyan project-qv-badge"></span>
+      </div>
+      <div class="project-qv-body">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-2); flex-wrap:wrap; gap:8px;">
+          <h3 id="qv-modal-title" class="modal-title" style="margin:0; font-size:var(--text-2xl);"></h3>
+          <span id="qv-modal-year" class="font-mono text-dim" style="font-size:12px;"></span>
+        </div>
+        <p id="qv-modal-desc" class="modal-desc" style="font-size:var(--text-sm); line-height:1.6; margin-bottom:var(--space-4);"></p>
+        
+        <div style="margin-bottom:var(--space-5);">
+          <span style="font-size:var(--text-xs); color:var(--text-dim); text-transform:uppercase; letter-spacing:0.05em; font-family:var(--font-mono); display:block; margin-bottom:8px;">Teknologi Utama:</span>
+          <div id="qv-modal-tags" class="project-tags"></div>
+        </div>
+
+        <div class="modal-actions" style="justify-content:space-between; width:100%; border-top:1px solid var(--border-subtle); padding-top:var(--space-4); flex-wrap:wrap; gap:10px;">
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a id="qv-modal-demo" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm hover-lift" style="display:none;">
+              Kunjungi Web ↗
+            </a>
+            <a id="qv-modal-github" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm hover-lift">
+              Repositori GitHub ↗
+            </a>
+          </div>
+          <button type="button" id="qv-modal-close-btn" class="btn btn-outline btn-sm">Tutup Pratinjau</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- SCRIPTS -->
   <script src="js/main.js"></script>
