@@ -280,6 +280,21 @@
     }
   };
 
+  // Global Terminal Output Copy
+  window.copyTerminalOutput = function () {
+    const termEl = document.getElementById('typed-output');
+    if (termEl && navigator.clipboard && navigator.clipboard.writeText) {
+      const cleanText = termEl.innerText.replace(/✓/g, '').replace(/visitor@rafi-dev:~\$ whoami --verbose/g, '').trim();
+      navigator.clipboard.writeText(cleanText).then(() => {
+        window.showToast('Data terminal berhasil disalin!');
+      }).catch(() => {
+        window.showToast('Data siap.');
+      });
+    } else {
+      window.showToast('M Rafi Hibatulloh — Full-Stack Web Developer');
+    }
+  };
+
   // --- 7. Floating Back to Top Button Controller ---
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
@@ -330,5 +345,14 @@
       }
     });
   });
+
+  // --- 9. Progressive Web App (PWA) Service Worker Registration ---
+  if ('serviceWorker' in navigator && window.location.protocol.startsWith('http')) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {
+        // Silently catch in dev
+      });
+    });
+  }
 
 })();

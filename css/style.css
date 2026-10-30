@@ -2086,11 +2086,61 @@ code, pre, .font-mono {
   display: flex;
   align-items: center;
   gap: var(--space-3);
+  overflow: hidden;
 }
 
 .toast.visible {
   transform: translateY(0);
   opacity: 1;
+}
+
+.toast.visible::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2.5px;
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-indigo));
+  animation: toastProgressBar 3s linear forwards;
+}
+
+@keyframes toastProgressBar {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+/* Accessible Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--accent-primary) !important;
+  outline-offset: 3px !important;
+}
+
+/* Button & Card Micro-Interactions Tactile Response */
+.btn:active,
+.filter-btn:active,
+.social-cta-btn:active,
+.back-to-top-btn:active {
+  transform: scale(0.96) !important;
+  transition: transform 0.08s ease !important;
+}
+
+.terminal-copy-btn {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-secondary);
+  font-size: 10.5px;
+  font-family: var(--font-mono);
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.terminal-copy-btn:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }
 
 /* ==========================================================================
@@ -2191,4 +2241,97 @@ code, pre, .font-mono {
   .case-study-meta-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================================
+   PROJECT QUICK-VIEW MODAL & CARD ACTIONS
+   ========================================================================== */
+.project-qv-dialog {
+  max-width: 680px;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  background: #0b1220;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(56, 189, 248, 0.18);
+}
+
+.project-qv-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(11, 18, 32, 0.85);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.project-qv-close:hover {
+  background: var(--accent-rose);
+  border-color: var(--accent-rose);
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.project-qv-thumb-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #070a13;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.project-qv-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-qv-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.project-qv-body {
+  padding: var(--space-6) var(--space-8) var(--space-6) var(--space-8);
+}
+
+.project-card .project-thumb {
+  position: relative;
+  cursor: pointer;
+}
+
+.project-thumb-zoom-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(7, 10, 19, 0.88);
+  border: 1px solid var(--border-medium);
+  color: var(--accent-primary);
+  font-size: 11px;
+  font-family: var(--font-mono);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.project-card:hover .project-thumb-zoom-badge {
+  opacity: 1;
+  transform: translateY(0);
 }
