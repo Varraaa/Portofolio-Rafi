@@ -1,40 +1,42 @@
-# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh
+# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.0 Editorial Minimalist)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Varraaa/Portofolio-Rafi/main/assets/jas.jpeg" alt="Muhammad Rafi Hibatulloh" width="120" style="border-radius: 50%;" />
 </p>
 
 <p align="center">
-  <strong>Junior Web & Full-Stack Developer • Siswa Rekayasa Perangkat Lunak (RPL)</strong><br>
-  Membangun aplikasi web modern yang responsif, cepat, elegan, dan fungsional.
+  <strong>Full-Stack & Web Developer • Rekayasa Perangkat Lunak (RPL)</strong><br>
+  Editorial Minimalist Portfolio • Ink Aesthetics & Electric Lime Accent
 </p>
 
 <p align="center">
-  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Status-Active_Development-emerald?style=for-the-badge&logo=git" alt="Status"></a>
+  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.0_Editorial-a3e635?style=for-the-badge&logo=git&logoColor=black" alt="Status"></a>
   <a href="https://github.com/Varraaa"><img src="https://img.shields.io/badge/GitHub-Varraaa-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://wa.me/6281297577567"><img src="https://img.shields.io/badge/WhatsApp-Contact_Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"></a>
 </p>
 
 ---
 
-## 📌 Tentang Website Portofolio
+## 📌 Tentang Website Portofolio (v3.0)
 
-Repositori ini berisi kode sumber resmi untuk situs web portofolio pribadi **Muhammad Rafi Hibatulloh**. Didesain dengan estetika modern bergaya *dark mode* berpadu *glassmorphism*, situs ini dirancang secara khusus untuk menampilkan perjalanan akademis, keahlian teknis (*tech stack*), karya proyek nyata, serta sertifikasi industri di bidang web development.
+Repositori ini berisi kode sumber resmi untuk situs web portofolio pribadi **Muhammad Rafi Hibatulloh** (v3.0). Didesain dengan estetika **Editorial Minimalist**, mengombinasikan tema *deep dark ink* (`#0a0b0e`, `#111318`) dengan aksen punchy *Electric Lime* (`#a3e635`). Terinspirasi dari filosofi desain web developer modern bereputasi tinggi (clean, non-cluttered, high-contrast, bebas unsur AI-slop) yang dipadukan dengan identitas kuat Muhammad Rafi sebagai Full-Stack & Web Developer (Laravel, PHP, Modern JavaScript, MySQL).
 
-Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** (HTML5 Semantik, Modern CSS3, dan Vanilla JavaScript ES6+) untuk menjamin performa loading yang maksimal, efisiensi resource, aksesibilitas (ARIA-compliant), dan SEO-friendly tanpa beban framework eksternal yang berat.
+Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** murni (HTML5 Semantik, Modern CSS3 Custom Properties, dan Vanilla JavaScript ES6+) untuk menjamin kecepatan loading super cepat, aksesibilitas tinggi, dan kode terstruktur rapi.
 
 ---
 
-## ✨ Fitur-Fitur Utama
+## ✨ Fitur & Keunggulan Desain v3.0
 
-- 💻 **Terminal Simulator Interaktif** (`index.html`): Simulasi terminal CLI Unix (`whoami --verbose`) interaktif di halaman depan yang memperkenalkan profil developer secara visual dan unik.
-- ⌨️ **Command Palette Pintar (`Ctrl + K` / `Cmd + K`)**: Fitur pencarian cepat bergaya editor modern untuk navigasi antar halaman, pintasan sertifikat, proyek, hingga aksi salin email instan.
-- 🔍 **Filter & Live Search Proyek** (`projects.html`): Fitur penyaringan kategori (*Full-Stack & Backend*, *Frontend Modern*, *Sistem & POS*) serta pencarian teks *real-time* berdasarkan nama proyek, deskripsi, atau teknologi yang digunakan.
-- 🖼️ **Lightbox Sertifikat Interaktif** (`certificate.html`): Pratinjau gambar sertifikat beresolusi tinggi dengan efek modal lightbox yang nyaman dilihat.
-- ✉️ **Formulir Kontak Cerdas & Validasi** (`contact.html`): Validasi formulir interaktif di sisi klien lengkap dengan penghitung karakter pesan (*character counter* 500 karakter), feedback error langsung, dan integrasi toast notification.
-- 📱 **Desain Responsif & Mobile Drawer Navigation**: Optimal di semua ukuran layar (Mobile, Tablet, Desktop) dilengkapi menu drawer mobile dengan aksesibilitas ARIA.
-- 🎨 **Efek Visual Modern**: Efek 3D *Tilt Card*, *Spotlight Glow Card*, *Scroll Reveal Animations*, *Counter Numbers*, dan *Tech Marquee Ticker*.
-- 📋 **One-Click Clipboard**: Fitur salin alamat email langsung ke clipboard dengan pemberitahuan toast.
+- 🔤 **Editorial Typography**: Menggunakan *Bricolage Grotesque* untuk judul display yang tegas berpadu dengan *Plus Jakarta Sans* untuk body text dan *JetBrains Mono* untuk indikator teknis.
+- 🏷️ **Numbered Section Kicker Architecture**: Penomoran editorial terstruktur di setiap section (`01 — ABOUT ME`, `02 — SELECTED WORKS`, `03 — CREDENTIALS`, `04 — TECH STACK`, `05 — CONTACT`).
+- 🔘 **Minimal Pill Navbar & Active Indicators**: Navigasi pill mengambang dengan efek backdrop blur halus, dot aksen lime, serta drawer mobile intuitif.
+- 🖤 **Monochrome-to-Color Portrait Hover**: Efek hover interaktif pada foto profil resmi yang beralih dari skala abu-abu elegan ke warna alami.
+- ⚡ **Minimalist Tech Marquee Ticker**: Ticker horizontal tanpa henti dengan separator bintang (`✦`) dan typography monokromatik.
+- 📊 **Metric Counter Strip**: Penghitung statistik interaktif dengan tipografi angka besar dan easing deselerasi eksponensial.
+- 💻 **Terminal Simulator Interaktif** (`index.html`): Simulasi terminal CLI Unix (`whoami --verbose`) interaktif dengan opsi copy output.
+- 🔍 **Live Search & Filter Kategori Proyek** (`projects.html`): Pencarian teks real-time instan dan penyaringan kategori proyek.
+- 🖼️ **Interactive Lightbox Modal** (`certificate.html`): Pratinjau sertifikat resmi industri beresolusi tinggi.
+- ✉️ **Editorial Contact Section & Dual-Channel Form** (`contact.html`): Banner kontak punchy *"Let's build something."* serta modal konfirmasi pesan siap kirim ke WhatsApp / Email.
 
 ---
 
