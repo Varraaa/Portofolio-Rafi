@@ -1113,19 +1113,64 @@ code, pre, .font-mono {
   align-items: start;
 }
 
-.about-portrait-frame {
+.about-portrait-frame,
+.editorial-portrait {
   position: relative;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  border: 1px solid var(--border-accent);
-  box-shadow: 0 0 35px -5px rgba(56, 189, 248, 0.25);
-  background: #0d1424;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #111318;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7), 0 0 30px -10px rgba(163, 230, 53, 0.15);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-portrait-frame img {
+.about-portrait-frame:hover,
+.editorial-portrait:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.8), 0 0 35px 2px rgba(163, 230, 53, 0.25);
+  transform: translateY(-4px);
+}
+
+.about-portrait-frame img,
+.editorial-portrait img {
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  filter: grayscale(100%) contrast(1.05);
+  transition: filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.about-portrait-frame:hover img,
+.editorial-portrait:hover img {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.03);
+}
+
+.portrait-status-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  right: 14px;
+  background: rgba(10, 11, 14, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  z-index: 2;
+  transition: border-color var(--transition-fast);
+}
+
+.about-portrait-frame:hover .portrait-status-badge,
+.editorial-portrait:hover .portrait-status-badge {
+  border-color: var(--accent-primary);
 }
 
 .timeline {
