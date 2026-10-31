@@ -1,54 +1,55 @@
 /* ==========================================================================
-   DESIGN TOKENS - HIGH-TECH OBSIDIAN DARK THEME
-   M Rafi Hibatulloh | Portfolio Engineering System
+   DESIGN TOKENS - EDITORIAL INK & ELECTRIC LIME MINIMALIST THEME
+   Inspired by modern editorial portfolios | M Rafi Hibatulloh
    ========================================================================== */
 
 :root {
-  /* Color Palette - Core Canvas & Surfaces */
-  --bg-canvas: #090d16;
-  --bg-surface: #0f172a;
-  --bg-surface-elevated: #162036;
-  --bg-card: rgba(18, 26, 45, 0.75);
-  --bg-card-hover: rgba(26, 38, 64, 0.85);
-  --bg-glass: rgba(15, 23, 42, 0.82);
-  --bg-input: #0d1424;
+  /* Color Palette - Clean Deep Ink & Surfaces */
+  --bg-canvas: #0a0b0e;               /* Deep ink black */
+  --bg-surface: #111318;              /* Surface container */
+  --bg-surface-elevated: #181b22;     /* Card surface */
+  --bg-card: rgba(18, 20, 27, 0.78);
+  --bg-card-hover: rgba(26, 29, 39, 0.92);
+  --bg-glass: rgba(12, 14, 18, 0.85);
+  --bg-input: #101217;
 
-  /* Accent & High-Tech Glow Colors */
-  --accent-primary: #38bdf8;          /* Electric Cyan */
-  --accent-primary-hover: #7dd3fc;
-  --accent-primary-glow: rgba(56, 189, 248, 0.25);
-  --accent-primary-subtle: rgba(56, 189, 248, 0.1);
+  /* Signature Electric Accent (Lime Chartreuse) */
+  --accent-primary: #a3e635;          /* Electric Lime */
+  --accent-primary-hover: #bef264;
+  --accent-primary-glow: rgba(163, 230, 53, 0.28);
+  --accent-primary-subtle: rgba(163, 230, 53, 0.12);
 
-  --accent-secondary: #818cf8;        /* Neon Indigo */
-  --accent-secondary-glow: rgba(129, 140, 248, 0.25);
-  --accent-secondary-subtle: rgba(129, 140, 248, 0.1);
+  --accent-secondary: #e2e8f0;        /* Crisp monochrome off-white */
+  --accent-secondary-glow: rgba(255, 255, 255, 0.15);
+  --accent-secondary-subtle: rgba(255, 255, 255, 0.06);
 
-  --accent-emerald: #34d399;          /* Emerald Pulse / Success */
-  --accent-emerald-glow: rgba(52, 211, 153, 0.25);
-  --accent-emerald-subtle: rgba(52, 211, 153, 0.12);
+  --accent-emerald: #a3e635;          /* Harmonized lime pulse */
+  --accent-emerald-glow: rgba(163, 230, 53, 0.25);
+  --accent-emerald-subtle: rgba(163, 230, 53, 0.12);
 
-  --accent-amber: #fbbf24;            /* Warning / In-progress */
-  --accent-amber-subtle: rgba(251, 191, 36, 0.12);
+  --accent-amber: #facc15;            /* Clean amber */
+  --accent-amber-subtle: rgba(250, 204, 21, 0.12);
 
-  --accent-rose: #f43f5e;             /* Error / Highlight */
-  --accent-rose-subtle: rgba(244, 63, 94, 0.12);
+  --accent-rose: #f87171;             /* Clean muted coral */
+  --accent-rose-subtle: rgba(248, 113, 113, 0.12);
 
-  /* Typography Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
-  --text-inverse: #090d16;
+  /* Typography Colors - High-Contrast Editorial */
+  --text-primary: #f4f4f5;            /* Crisp off-white */
+  --text-secondary: #d4d4d8;          /* Light gray */
+  --text-muted: #a1a1aa;              /* Muted secondary */
+  --text-dim: #71717a;                /* Dim metadata */
+  --text-inverse: #0a0b0e;
 
-  /* Borders & Dividers */
+  /* Borders & Dividers - Precision Thin Lines */
   --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.15);
-  --border-focus: rgba(56, 189, 248, 0.6);
-  --border-accent: rgba(56, 189, 248, 0.3);
+  --border-medium: rgba(255, 255, 255, 0.14);
+  --border-focus: rgba(163, 230, 53, 0.6);
+  --border-accent: rgba(163, 230, 53, 0.35);
 
   /* Typography Scale */
-  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  --font-display: 'Bricolage Grotesque', 'Plus Jakarta Sans', -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
 
   --text-xs: 0.75rem;     /* 12px */
   --text-sm: 0.875rem;    /* 14px */
