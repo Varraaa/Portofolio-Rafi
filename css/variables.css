@@ -13,19 +13,19 @@
   --bg-glass: rgba(12, 14, 18, 0.85);
   --bg-input: #101217;
 
-  /* Signature Electric Accent (Lime Chartreuse) */
-  --accent-primary: #a3e635;          /* Electric Lime */
-  --accent-primary-hover: #bef264;
-  --accent-primary-glow: rgba(163, 230, 53, 0.28);
-  --accent-primary-subtle: rgba(163, 230, 53, 0.12);
+  /* Signature Refined Accent (Muted Emerald / Soft Sage) */
+  --accent-primary: #10b981;          /* Refined Emerald Green (Calm & Non-Neon) */
+  --accent-primary-hover: #34d399;
+  --accent-primary-glow: rgba(16, 185, 129, 0.22);
+  --accent-primary-subtle: rgba(16, 185, 129, 0.10);
 
   --accent-secondary: #e2e8f0;        /* Crisp monochrome off-white */
   --accent-secondary-glow: rgba(255, 255, 255, 0.15);
   --accent-secondary-subtle: rgba(255, 255, 255, 0.06);
 
-  --accent-emerald: #a3e635;          /* Harmonized lime pulse */
-  --accent-emerald-glow: rgba(163, 230, 53, 0.25);
-  --accent-emerald-subtle: rgba(163, 230, 53, 0.12);
+  --accent-emerald: #10b981;          /* Harmonized soft emerald pulse */
+  --accent-emerald-glow: rgba(16, 185, 129, 0.22);
+  --accent-emerald-subtle: rgba(16, 185, 129, 0.10);
 
   --accent-amber: #facc15;            /* Clean amber */
   --accent-amber-subtle: rgba(250, 204, 21, 0.12);
@@ -43,8 +43,8 @@
   /* Borders & Dividers - Precision Thin Lines */
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-medium: rgba(255, 255, 255, 0.14);
-  --border-focus: rgba(163, 230, 53, 0.6);
-  --border-accent: rgba(163, 230, 53, 0.35);
+  --border-focus: rgba(16, 185, 129, 0.45);
+  --border-accent: rgba(16, 185, 129, 0.25);
 
   /* Typography Scale */
   --font-display: 'Bricolage Grotesque', 'Plus Jakarta Sans', -apple-system, sans-serif;

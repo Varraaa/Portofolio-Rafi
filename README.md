@@ -6,11 +6,11 @@
 
 <p align="center">
   <strong>Full-Stack & Web Developer • Rekayasa Perangkat Lunak (RPL)</strong><br>
-  Editorial Minimalist Portfolio • Ink Aesthetics & Electric Lime Accent
+  Editorial Minimalist Portfolio • Ink Aesthetics & Muted Emerald Accent
 </p>
 
 <p align="center">
-  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.0_Editorial-a3e635?style=for-the-badge&logo=git&logoColor=black" alt="Status"></a>
+  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.0_Editorial-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
   <a href="https://github.com/Varraaa"><img src="https://img.shields.io/badge/GitHub-Varraaa-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://wa.me/6281297577567"><img src="https://img.shields.io/badge/WhatsApp-Contact_Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"></a>
 </p>
@@ -19,7 +19,7 @@
 
 ## 📌 Tentang Website Portofolio (v3.0)
 
-Repositori ini berisi kode sumber resmi untuk situs web portofolio pribadi **Muhammad Rafi Hibatulloh** (v3.0). Didesain dengan estetika **Editorial Minimalist**, mengombinasikan tema *deep dark ink* (`#0a0b0e`, `#111318`) dengan aksen punchy *Electric Lime* (`#a3e635`). Terinspirasi dari filosofi desain web developer modern bereputasi tinggi (clean, non-cluttered, high-contrast, bebas unsur AI-slop) yang dipadukan dengan identitas kuat Muhammad Rafi sebagai Full-Stack & Web Developer (Laravel, PHP, Modern JavaScript, MySQL).
+Repositori ini berisi kode sumber resmi untuk situs web portofolio pribadi **Muhammad Rafi Hibatulloh** (v3.0). Didesain dengan estetika **Editorial Minimalist**, mengombinasikan tema *deep dark ink* (`#0a0b0e`, `#111318`) dengan aksen tenang dan elegan *Muted Emerald* (`#10b981`). Terinspirasi dari filosofi desain web developer modern bereputasi tinggi (clean, non-cluttered, high-contrast, bebas unsur AI-slop) yang dipadukan dengan identitas kuat Muhammad Rafi sebagai Full-Stack & Web Developer (Laravel, PHP, Modern JavaScript, MySQL).
 
 Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** murni (HTML5 Semantik, Modern CSS3 Custom Properties, dan Vanilla JavaScript ES6+) untuk menjamin kecepatan loading super cepat, aksesibilitas tinggi, dan kode terstruktur rapi.
 
