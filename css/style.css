@@ -1237,9 +1237,9 @@ code, pre, .font-mono {
 }
 
 .modern-tech-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
+  background: #111318;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
   padding: var(--space-6);
   transition: all var(--transition-normal);
   display: flex;
@@ -1247,10 +1247,10 @@ code, pre, .font-mono {
 }
 
 .modern-tech-card:hover {
-  border-color: var(--accent-primary);
-  background: var(--bg-card-hover);
+  border-color: rgba(163, 230, 53, 0.4);
+  background: #141720;
   transform: translateY(-4px);
-  box-shadow: var(--shadow-glow-cyan);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
 }
 
 .modern-tech-header {
