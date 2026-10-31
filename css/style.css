@@ -1662,6 +1662,69 @@ code, pre, .font-mono {
    GLOBAL FOOTER & TOAST
    ========================================================================== */
 /* ==========================================================================
+   EDITORIAL CALL TO ACTION SECTION
+   ========================================================================== */
+.editorial-cta-box {
+  background: #111318;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-2xl);
+  padding: clamp(32px, 6vw, 64px);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.editorial-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6.5vw, 5.25rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: #f4f4f5;
+  margin-bottom: var(--space-6);
+}
+
+.editorial-cta-title .accent-dot {
+  color: var(--accent-primary);
+  display: inline-block;
+}
+
+.editorial-cta-desc {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 620px;
+  line-height: 1.6;
+  margin-bottom: var(--space-8);
+}
+
+.editorial-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.editorial-email-link {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--text-primary);
+  padding-bottom: 3px;
+  transition: all var(--transition-fast);
+  display: inline-block;
+}
+
+.editorial-email-link:hover {
+  color: var(--accent-primary);
+  border-bottom-color: var(--accent-primary);
+  background: var(--accent-primary-subtle);
+}
+
+/* ==========================================================================
    HIGH-TECH PORTFOLIO FOOTER & SOCIAL CTA ARCHITECTURE
    ========================================================================== */
 .footer {
