@@ -913,10 +913,10 @@ code, pre, .font-mono {
 
 .search-input {
   width: 100%;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  padding: 12px 16px 12px 46px;
+  background: #111318;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px 14px 48px;
   font-family: inherit;
   font-size: var(--text-sm);
   color: var(--text-primary);
@@ -926,8 +926,8 @@ code, pre, .font-mono {
 .search-input:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px var(--accent-primary-subtle);
-  background: #111a2f;
+  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.15);
+  background: #151821;
 }
 
 .filter-pills {
@@ -938,25 +938,27 @@ code, pre, .font-mono {
 }
 
 .filter-btn {
-  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  font-size: 12px;
   font-weight: 500;
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: var(--radius-full);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
+  background: #111318;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text-muted);
   transition: all var(--transition-fast);
+  cursor: pointer;
 }
 
 .filter-btn:hover {
   color: var(--text-primary);
-  border-color: var(--border-medium);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .filter-btn.active {
   background: var(--accent-primary);
-  color: var(--text-inverse);
-  font-weight: 600;
+  color: #0a0b0e;
+  font-weight: 700;
   border-color: var(--accent-primary);
 }
 
