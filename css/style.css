@@ -1725,16 +1725,15 @@ code, pre, .font-mono {
 }
 
 /* ==========================================================================
-   HIGH-TECH PORTFOLIO FOOTER & SOCIAL CTA ARCHITECTURE
+   MINIMALIST INK PORTFOLIO FOOTER
    ========================================================================== */
 .footer {
-  background: linear-gradient(180deg, #070a13 0%, #03060a 100%);
-  border-top: 1px solid rgba(56, 189, 248, 0.15);
-  padding-top: 64px;
+  background: #0a0b0e;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 56px;
   padding-bottom: 36px;
   margin-top: auto;
   position: relative;
-  overflow: hidden;
 }
 
 .footer::before {
@@ -1743,11 +1742,10 @@ code, pre, .font-mono {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 60%;
-  max-width: 800px;
+  width: 40%;
+  max-width: 500px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent-primary), transparent);
-  box-shadow: 0 0 20px var(--accent-primary);
+  background: linear-gradient(90deg, transparent, rgba(163, 230, 53, 0.4), transparent);
 }
 
 /* --- Social Media CTA Card Section --- */
