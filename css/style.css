@@ -55,12 +55,13 @@ body {
   background: var(--accent-primary);
 }
 
-/* Typography Defaults */
-h1, h2, h3, h4, h5, h6 {
+/* Typography Defaults - Editorial Display Hierarchy */
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
   color: var(--text-primary);
   font-weight: 700;
   line-height: var(--leading-tight);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
 }
 
 p {
@@ -447,19 +448,24 @@ code, pre, .font-mono {
 
 .section-kicker {
   font-family: var(--font-mono);
-  font-size: var(--text-xs);
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.22em;
   color: var(--accent-primary);
-  margin-bottom: var(--space-2);
-  display: block;
+  margin-bottom: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
 }
 
 .section-title {
+  font-family: var(--font-display);
   font-size: var(--text-3xl);
   color: var(--text-primary);
   margin-bottom: var(--space-3);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
 }
 
 .section-subtitle {
