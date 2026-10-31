@@ -2487,19 +2487,21 @@ code, pre, .font-mono {
 
 .project-thumb-zoom-badge {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background: rgba(7, 10, 19, 0.88);
-  border: 1px solid var(--border-medium);
+  bottom: 12px;
+  right: 12px;
+  background: rgba(17, 19, 24, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   color: var(--accent-primary);
   font-size: 11px;
   font-family: var(--font-mono);
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
   opacity: 0;
   transform: translateY(4px);
   transition: all 0.25s ease;
   pointer-events: none;
+  backdrop-filter: blur(8px);
 }
 
 .project-card:hover .project-thumb-zoom-badge {
