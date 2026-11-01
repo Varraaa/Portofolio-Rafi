@@ -1,11 +1,13 @@
 /**
- * ANIMATIONS & MICRO-INTERACTIONS CONTROLLER
- * M Rafi Hibatulloh | Portfolio Engineering System
+ * ANIMATIONS & MODERN UX CONTROLLER (60 FPS PERFORMANCE TUNED)
+ * M Rafi Hibatulloh | Modern Portfolio Engineering System
  * 
  * Features:
- * 1. IntersectionObserver for 60fps scroll reveal
- * 2. 3D Card Tilt & Dynamic Cursor Spotlight effect
- * 3. Hero Terminal interactive typing simulation
+ * 1. Global Viewport Scroll Progress Bar
+ * 2. IntersectionObserver for dynamic scroll-triggered reveals (sections, text, images, cards)
+ * 3. 3D Card Tilt & Dynamic Cursor Spotlight effect
+ * 4. Interactive Hero Terminal typing simulation
+ * 5. Interactive Stat Counter animation with easeOutExpo
  */
 
 (function () {
@@ -13,28 +15,68 @@
 
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // --- 1. IntersectionObserver Scroll Reveal ---
+  // --- 1. Top Reading Scroll Progress Bar ---
+  if (!prefersReduced) {
+    let progressBar = document.getElementById('scroll-progress-bar');
+    if (!progressBar) {
+      progressBar = document.createElement('div');
+      progressBar.id = 'scroll-progress-bar';
+      progressBar.className = 'scroll-progress-bar';
+      progressBar.setAttribute('aria-hidden', 'true');
+      document.body.prepend(progressBar);
+    }
+
+    let ticking = false;
+    function updateScrollProgress() {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (scrollHeight > 0) {
+        const scrolled = (window.scrollY / scrollHeight) * 100;
+        progressBar.style.width = Math.min(Math.max(scrolled, 0), 100) + '%';
+      }
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollProgress);
+        ticking = true;
+      }
+    }, { passive: true });
+    updateScrollProgress();
+  }
+
+  // --- 2. Kinetic IntersectionObserver Scroll Reveal ---
   if (!prefersReduced && 'IntersectionObserver' in window) {
-    const revealElements = document.querySelectorAll('.reveal');
+    const revealTargets = document.querySelectorAll(
+      '.reveal, .reveal-scale, .reveal-left, .reveal-right, .reveal-stagger, .img-reveal, .project-card, .feat-card, .service-card, .stat-item'
+    );
+
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
+          
+          // If the element has child images or items, activate them smoothly
+          const images = entry.target.querySelectorAll('img');
+          images.forEach(img => img.classList.add('active'));
+
           observer.unobserve(entry.target);
         }
       });
     }, {
       threshold: 0.12,
-      rootMargin: '0px 0px -40px 0px'
+      rootMargin: '0px 0px -36px 0px'
     });
 
-    revealElements.forEach(el => revealObserver.observe(el));
+    revealTargets.forEach(el => revealObserver.observe(el));
   } else {
-    // Immediate display if reduced motion is requested
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+    // Fallback: immediate display if reduced motion is requested or unsupported
+    document.querySelectorAll(
+      '.reveal, .reveal-scale, .reveal-left, .reveal-right, .reveal-stagger, .img-reveal, .project-card, .feat-card, .service-card, .stat-item'
+    ).forEach(el => el.classList.add('active'));
   }
 
-  // --- 2. 3D Tilt & Spotlight Glow Effect ---
+  // --- 3. 3D Tilt & Spotlight Glow Effect ---
   if (!prefersReduced && window.innerWidth > 768) {
     const cards = document.querySelectorAll('.tilt-card, .spotlight-card');
 
@@ -52,8 +94,8 @@
         if (card.classList.contains('tilt-card')) {
           const centerX = rect.width / 2;
           const centerY = rect.height / 2;
-          const rotateX = ((y - centerY) / centerY) * -6; // max -6 to +6 deg
-          const rotateY = ((x - centerX) / centerX) * 6;  // max -6 to +6 deg
+          const rotateX = ((y - centerY) / centerY) * -5; // subtle -5 to +5 deg
+          const rotateY = ((x - centerX) / centerX) * 5;  // subtle -5 to +5 deg
           card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-4px)`;
         }
       });
@@ -66,7 +108,7 @@
     });
   }
 
-  // --- 3. Terminal Typing Animation (Hero Section) ---
+  // --- 4. Terminal Typing Animation (Hero Section) ---
   const typedEl = document.getElementById('typed-output');
   if (typedEl) {
     const lines = [
@@ -115,7 +157,7 @@
     }
   }
 
-  // --- 4. Interactive Counter Animation (Stats Strip) ---
+  // --- 5. Interactive Counter Animation (Stats Strip) ---
   const statValues = document.querySelectorAll('.stat-value[data-counter-target]');
   if (statValues.length > 0) {
     function animateCounter(el) {
@@ -191,4 +233,3 @@
   }
 
 })();
-

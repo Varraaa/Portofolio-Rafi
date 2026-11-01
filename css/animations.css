@@ -1,17 +1,14 @@
 /* ==========================================================================
-   ANIMATIONS & MICRO-INTERACTIONS (60 FPS PERFORMANCE TUNED)
-   M Rafi Hibatulloh | Portfolio Engineering System
+   ANIMATIONS & MODERN UX INTERACTIONS (60 FPS PERFORMANCE TUNED)
+   M Rafi Hibatulloh | Modern Portfolio Engineering System
    ========================================================================== */
 
 /* Keyframe Definitions */
 @keyframes pulseDot {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: scale(1);
     opacity: 1;
   }
-
   50% {
     transform: scale(1.4);
     opacity: 0.6;
@@ -19,24 +16,18 @@
 }
 
 @keyframes pulseGlow {
-
-  0%,
-  100% {
-    box-shadow: 0 0 15px -3px rgba(56, 189, 248, 0.35);
+  0%, 100% {
+    box-shadow: 0 0 15px -3px rgba(16, 185, 129, 0.25);
   }
-
   50% {
-    box-shadow: 0 0 28px 2px rgba(56, 189, 248, 0.65);
+    box-shadow: 0 0 26px 2px rgba(16, 185, 129, 0.55);
   }
 }
 
 @keyframes floatSlow {
-
-  0%,
-  100% {
+  0%, 100% {
     transform: translateY(0px);
   }
-
   50% {
     transform: translateY(-8px);
   }
@@ -46,19 +37,8 @@
   0% {
     background-position: -200% 0;
   }
-
   100% {
     background-position: 200% 0;
-  }
-}
-
-@keyframes scanline {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(1000%);
   }
 }
 
@@ -67,7 +47,6 @@
     opacity: 0;
     transform: scale(0.94) translateY(12px);
   }
-
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -78,47 +57,154 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
 
-/* Scroll-Triggered Reveal Animations (IntersectionObserver Driven) */
+@keyframes lineExpand {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 32px;
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+   Top Scroll Progress Bar
+   ========================================================================== */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 2.5px;
+  background: linear-gradient(90deg, var(--accent-primary, #10b981), #059669, #38bdf8);
+  z-index: 99999;
+  transition: width 0.08s ease-out;
+  pointer-events: none;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.45);
+}
+
+/* ==========================================================================
+   Scroll-Triggered Reveal Animations (IntersectionObserver Driven)
+   ========================================================================== */
+
+/* Standard Vertical Fade + Soft Blur Unmasking */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateY(28px);
+  filter: blur(4px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+  filter: blur(0);
 }
 
-.reveal-delay-1 {
-  transition-delay: 0.1s;
+/* Scale & Pop-in Reveal for Cards and Windows */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.94) translateY(20px);
+  filter: blur(3px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
-.reveal-delay-2 {
-  transition-delay: 0.2s;
+.reveal-scale.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
 }
 
-.reveal-delay-3 {
-  transition-delay: 0.3s;
+/* Horizontal Slide Reveals */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  filter: blur(3px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal-delay-4 {
-  transition-delay: 0.4s;
+.reveal-left.active {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
 }
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(32px);
+  filter: blur(3px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right.active {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+}
+
+/* Image Reveal with subtle scale and contrast bloom */
+.img-reveal,
+.project-card-image img,
+.gallery-item img {
+  opacity: 0;
+  transform: scale(0.96) translateY(14px);
+  filter: blur(4px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-reveal.active,
+.reveal.active .project-card-image img,
+.reveal.active .gallery-item img,
+img.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  filter: blur(0);
+}
+
+/* Stagger Delays */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Grid Stagger Container */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-stagger.active > *:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.05s; }
+.reveal-stagger.active > *:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.12s; }
+.reveal-stagger.active > *:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.19s; }
+.reveal-stagger.active > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.26s; }
+.reveal-stagger.active > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.33s; }
+.reveal-stagger.active > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.40s; }
 
 /* Dynamic Cursor Glow & Card Tilt */
 .tilt-card {
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
-    border-color 0.25s ease;
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease;
   will-change: transform;
 }
 
@@ -148,7 +234,9 @@
 
 /* Micro-Interactions */
 .hover-lift {
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-fast);
+  transition: transform var(--transition-normal, 0.25s ease),
+              box-shadow var(--transition-normal, 0.25s ease),
+              border-color var(--transition-fast, 0.15s ease);
 }
 
 .hover-lift:hover {
@@ -158,13 +246,13 @@
 
 /* Accessible Focus Visible Ring */
 :focus-visible {
-  outline: 2px solid var(--accent-primary) !important;
+  outline: 2px solid var(--accent-primary, #10b981) !important;
   outline-offset: 3px !important;
 }
 
 .hover-arrow-icon {
   display: inline-block;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast, 0.15s ease);
 }
 
 a:hover .hover-arrow-icon,
@@ -172,40 +260,8 @@ button:hover .hover-arrow-icon {
   transform: translateX(4px);
 }
 
-.badge-glow {
-  position: relative;
-}
-
-.badge-glow::after {
-  content: '';
-  position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(90deg, rgba(56, 189, 248, 0.4), rgba(129, 140, 248, 0.4));
-  filter: blur(4px);
-  opacity: 0;
-  transition: opacity var(--transition-fast);
-  z-index: -1;
-}
-
-.badge-glow:hover::after {
-  opacity: 1;
-}
-
-/* Pulse status dot */
-.status-dot-active {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--accent-emerald);
-  box-shadow: 0 0 8px var(--accent-emerald);
-  animation: pulseDot 2s infinite ease-in-out;
-}
-
 /* Reduced Motion Accessibility */
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -215,10 +271,20 @@ button:hover .hover-arrow-icon {
     scroll-behavior: auto !important;
   }
 
-  .reveal {
+  .reveal,
+  .reveal-scale,
+  .reveal-left,
+  .reveal-right,
+  .img-reveal,
+  .reveal-stagger > * {
     opacity: 1 !important;
     transform: none !important;
+    filter: none !important;
     transition: none !important;
+  }
+
+  .scroll-progress-bar {
+    display: none !important;
   }
 
   .spotlight-card::before {
