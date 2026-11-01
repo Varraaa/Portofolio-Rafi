@@ -47,7 +47,7 @@ Website portofolio ini terdiri dari 5 halaman utama:
 | Halaman | Berkas | Deskripsi |
 | :--- | :--- | :--- |
 | **Home** | [`index.html`](file:///c:/PORTOFOLIO/portofolio-rafi/index.html) | Hero banner, terminal simulator, tech ticker, statistik metrik, dan sorotan proyek unggulan. |
-| **About** | [`about.html`](file:///c:/PORTOFOLIO/portofolio-rafi/about.html) | Biografi lengkap, filosofi kerja, riwayat pendidikan formal di SMKN 1 Katapang, dan unduhan resume PDF. |
+| **About** | [`about.html`](file:///c:/PORTOFOLIO/portofolio-rafi/about.html) | Biografi lengkap, filosofi kerja, riwayat latar belakang kejuruan Rekayasa Perangkat Lunak (RPL), dan unduhan resume PDF. |
 | **Projects** | [`projects.html`](file:///c:/PORTOFOLIO/portofolio-rafi/projects.html) | Katalog lengkap 6 karya web dengan fitur *live search* dan filter tab kategori. |
 | **Certificate** | [`certificate.html`](file:///c:/PORTOFOLIO/portofolio-rafi/certificate.html) | Galeri sertifikat resmi pelatihan industri dengan fitur pratinjau zoom lightbox. |
 | **Contact** | [`contact.html`](file:///c:/PORTOFOLIO/portofolio-rafi/contact.html) | Saluran komunikasi langsung (WhatsApp, Email, Lokasi Soreang) serta formulir pesan. |
