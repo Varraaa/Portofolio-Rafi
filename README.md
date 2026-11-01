@@ -25,18 +25,20 @@ Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** murni (HTM
 
 ---
 
-## ✨ Fitur & Keunggulan Desain v3.0
+## ✨ Fitur & Keunggulan Desain v3.2
 
+- 🌿 **Refined Muted Emerald Accent**: Aksen warna hijau zamrud tenang (`#10b981`), menyatu harmonis dengan palet *dark ink* tanpa silau neon.
 - 🔤 **Editorial Typography**: Menggunakan *Bricolage Grotesque* untuk judul display yang tegas berpadu dengan *Plus Jakarta Sans* untuk body text dan *JetBrains Mono* untuk indikator teknis.
 - 🏷️ **Numbered Section Kicker Architecture**: Penomoran editorial terstruktur di setiap section (`01 — ABOUT ME`, `02 — SELECTED WORKS`, `03 — CREDENTIALS`, `04 — TECH STACK`, `05 — CONTACT`).
-- 🔘 **Minimal Pill Navbar & Active Indicators**: Navigasi pill mengambang dengan efek backdrop blur halus, dot aksen lime, serta drawer mobile intuitif.
-- 🖤 **Monochrome-to-Color Portrait Hover**: Efek hover interaktif pada foto profil resmi yang beralih dari skala abu-abu elegan ke warna alami.
-- ⚡ **Minimalist Tech Marquee Ticker**: Ticker horizontal tanpa henti dengan separator bintang (`✦`) dan typography monokromatik.
+- 🔘 **Back-to-Top Floating Button**: Tombol navigasi kembali ke atas dengan aksen emerald yang selaras.
+- 📜 **Top Viewport Reading Progress Bar**: Indikator progres scroll halus di bagian paling atas layar yang melacak pembacaan halaman secara real-time.
+- ✨ **Kinetic Scroll-Triggered Reveals**: Kemunculan elemen teks, kartu, dan gambar dengan efek un-blur dan pergerakan halus berbasis `IntersectionObserver`.
+- ⚡ **Minimalist Tech Marquee Ticker**: Ticker horizontal tanpa henti dengan separator bintang (`✦`) dan tipografi monokromatik.
 - 📊 **Metric Counter Strip**: Penghitung statistik interaktif dengan tipografi angka besar dan easing deselerasi eksponensial.
 - 💻 **Terminal Simulator Interaktif** (`index.html`): Simulasi terminal CLI Unix (`whoami --verbose`) interaktif dengan opsi copy output.
 - 🔍 **Live Search & Filter Kategori Proyek** (`projects.html`): Pencarian teks real-time instan dan penyaringan kategori proyek.
-- 🖼️ **Interactive Lightbox Modal** (`certificate.html`): Pratinjau sertifikat resmi industri beresolusi tinggi.
-- ✉️ **Editorial Contact Section & Dual-Channel Form** (`contact.html`): Banner kontak punchy *"Let's build something."* serta modal konfirmasi pesan siap kirim ke WhatsApp / Email.
+- ✉️ **Live Email Dispatch**: Formulir kontak terintegrasi pengiriman langsung ke `mrafi.hiba@gmail.com` lengkap dengan validasi live dan fallback dialog WhatsApp/Email.
+- 🛡️ **Clean & Professional Vector Icons**: Ikon vektor SVG resmi untuk GitHub, Instagram, WhatsApp, dan Email.
 
 ---
 
@@ -49,8 +51,8 @@ Website portofolio ini terdiri dari 5 halaman utama:
 | **Home** | [`index.html`](file:///c:/PORTOFOLIO/portofolio-rafi/index.html) | Hero banner, terminal simulator, tech ticker, statistik metrik, dan sorotan proyek unggulan. |
 | **About** | [`about.html`](file:///c:/PORTOFOLIO/portofolio-rafi/about.html) | Biografi lengkap, filosofi kerja, riwayat latar belakang kejuruan Rekayasa Perangkat Lunak (RPL), dan unduhan resume PDF. |
 | **Projects** | [`projects.html`](file:///c:/PORTOFOLIO/portofolio-rafi/projects.html) | Katalog lengkap 6 karya web dengan fitur *live search* dan filter tab kategori. |
-| **Certificate** | [`certificate.html`](file:///c:/PORTOFOLIO/portofolio-rafi/certificate.html) | Galeri sertifikat resmi pelatihan industri dengan fitur pratinjau zoom lightbox. |
-| **Contact** | [`contact.html`](file:///c:/PORTOFOLIO/portofolio-rafi/contact.html) | Saluran komunikasi langsung (WhatsApp, Email, Lokasi Soreang) serta formulir pesan. |
+| **Certificate** | [`certificate.html`](file:///c:/PORTOFOLIO/portofolio-rafi/certificate.html) | Status 404 Under Maintenance (dalam penataan ulang kurasi). |
+| **Contact** | [`contact.html`](file:///c:/PORTOFOLIO/portofolio-rafi/contact.html) | Saluran komunikasi langsung (WhatsApp, Email, GitHub, IG) serta formulir pesan real-time ke mrafi.hiba@gmail.com. |
 
 ---
 
@@ -173,8 +175,7 @@ cd Portofolio-Rafi
 
 - **Nama**: Muhammad Rafi Hibatulloh
 - **Peran**: Junior Web & Full-Stack Developer
-- **Pendidikan**: SMKN 1 Katapang (Rekayasa Perangkat Lunak, 2024–2027)
-- **Domisili**: Soreang, Kab. Bandung, Jawa Barat, Indonesia
+- **Keahlian**: Kejuruan Rekayasa Perangkat Lunak (Software Engineering)
 - **WhatsApp**: [+62 812-9757-7567](https://wa.me/6281297577567)
 - **Email**: [mrafi.hiba@gmail.com](mailto:mrafi.hiba@gmail.com)
 - **Instagram**: [@_vaarra](https://www.instagram.com/_vaarra/)
