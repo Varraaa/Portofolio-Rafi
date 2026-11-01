@@ -2182,9 +2182,9 @@ code, pre, .font-mono {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-full);
-  background: rgba(15, 23, 42, 0.88);
-  border: 1px solid rgba(56, 189, 248, 0.28);
-  color: var(--text-primary);
+  background: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  color: #0a0b0e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2211,11 +2211,11 @@ code, pre, .font-mono {
 }
 
 .back-to-top-btn:hover {
-  background: rgba(56, 189, 248, 0.18);
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
+  background: var(--accent-primary-hover);
+  border-color: var(--accent-primary-hover);
+  color: #0a0b0e;
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.6), 0 0 20px rgba(56, 189, 248, 0.35);
+  box-shadow: 0 14px 30px -4px rgba(0, 0, 0, 0.7), 0 6px 24px rgba(16, 185, 129, 0.5);
 }
 
 .back-to-top-btn:active {
