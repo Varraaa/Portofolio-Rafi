@@ -157,17 +157,23 @@
     }
   }
 
-  // --- 5. Interactive Counter Animation (Stats Strip) ---
+  // --- 5. Interactive Counter Animation (Automatic On Load & On Scroll) ---
   const statValues = document.querySelectorAll('.stat-value[data-counter-target]');
   if (statValues.length > 0) {
-    function animateCounter(el) {
-      if (el.dataset.animating === 'true') return;
-      el.dataset.animating = 'true';
-      el.classList.remove('stat-counted');
+    const animTimers = new Map();
 
+    function animateCounter(el) {
       const target = parseInt(el.getAttribute('data-counter-target'), 10) || 0;
       const suffix = el.getAttribute('data-counter-suffix') || '';
-      const duration = target > 50 ? 1800 : 1200; // ms
+      const duration = target > 50 ? 1500 : 1000; // ms
+
+      // Cancel any ongoing animation frame for this specific element
+      if (animTimers.has(el)) {
+        cancelAnimationFrame(animTimers.get(el));
+      }
+
+      el.dataset.animating = 'true';
+      el.classList.remove('stat-counted');
       let startTime = null;
 
       function step(timestamp) {
@@ -182,44 +188,48 @@
         el.textContent = current + suffix;
 
         if (progress < 1) {
-          requestAnimationFrame(step);
+          const rafId = requestAnimationFrame(step);
+          animTimers.set(el, rafId);
         } else {
           el.textContent = target + suffix;
           el.dataset.animating = 'false';
-          el.dataset.completed = 'true';
           el.classList.add('stat-counted');
+          animTimers.delete(el);
         }
       }
 
-      requestAnimationFrame(step);
+      const initialRaf = requestAnimationFrame(step);
+      animTimers.set(el, initialRaf);
     }
 
+    // 1. Trigger automatically when page initially loads
+    setTimeout(() => {
+      statValues.forEach(el => animateCounter(el));
+    }, 300);
+
+    // 2. Trigger automatically whenever user scrolls into the section
     if (!prefersReduced && 'IntersectionObserver' in window) {
-      const statsObserver = new IntersectionObserver((entries, observer) => {
+      const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             animateCounter(entry.target);
-            observer.unobserve(entry.target);
+          } else {
+            // Reset to 0 when scrolled out of view so next scroll animates smoothly
+            const suffix = entry.target.getAttribute('data-counter-suffix') || '';
+            entry.target.textContent = '0' + suffix;
           }
         });
       }, {
-        threshold: 0.25
+        threshold: 0.2,
+        rootMargin: '0px 0px -20px 0px'
       });
 
       statValues.forEach(el => {
-        const suffix = el.getAttribute('data-counter-suffix') || '';
-        el.textContent = '0' + suffix;
         statsObserver.observe(el);
-      });
-    } else {
-      statValues.forEach(el => {
-        const target = el.getAttribute('data-counter-target');
-        const suffix = el.getAttribute('data-counter-suffix') || '';
-        el.textContent = target + suffix;
       });
     }
 
-    // Interactive Re-trigger on Click with Tooltip Feedback
+    // 3. Interactive Re-trigger on Click with Tooltip Feedback
     statValues.forEach(el => {
       const parentCard = el.closest('.stat-item');
       if (parentCard) {
