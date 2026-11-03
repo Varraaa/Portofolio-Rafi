@@ -658,19 +658,19 @@ code, pre, .font-mono {
   width: 100%;
 }
 
-/* Terminal Component */
+/* Terminal Component - Deep Black Ink Aesthetic */
 .terminal-window {
-  background: #080d1a;
+  background: var(--bg-canvas, #0a0b0e);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg), 0 0 35px -5px rgba(56, 189, 248, 0.2);
+  box-shadow: var(--shadow-lg), 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.04);
   font-family: var(--font-mono);
   position: relative;
 }
 
 .terminal-header {
-  background: #0d1527;
+  background: var(--bg-surface, #111318);
   padding: 10px 16px;
   display: flex;
   align-items: center;
