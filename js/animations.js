@@ -48,7 +48,7 @@
   // --- 2. Kinetic IntersectionObserver Scroll Reveal ---
   if (!prefersReduced && 'IntersectionObserver' in window) {
     const revealTargets = document.querySelectorAll(
-      '.reveal, .reveal-scale, .reveal-left, .reveal-right, .reveal-stagger, .img-reveal, .project-card, .feat-card, .service-card, .stat-item'
+      '.reveal, .reveal-scale, .reveal-left, .reveal-right, .reveal-stagger, .img-reveal, .project-card, .feat-card, .service-card, .stat-item, .contact-channel-card, .timeline-item, .editorial-cta-card, .footer-cta-card, .about-portrait-frame, .section-heading, .editorial-card'
     );
 
     const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -72,7 +72,7 @@
   } else {
     // Fallback: immediate display if reduced motion is requested or unsupported
     document.querySelectorAll(
-      '.reveal, .reveal-scale, .reveal-left, .reveal-right, .reveal-stagger, .img-reveal, .project-card, .feat-card, .service-card, .stat-item'
+      '.reveal, .reveal-scale, .reveal-left, .reveal-right, .reveal-stagger, .img-reveal, .project-card, .feat-card, .service-card, .stat-item, .contact-channel-card, .timeline-item, .editorial-cta-card, .footer-cta-card, .about-portrait-frame, .section-heading, .editorial-card'
     ).forEach(el => el.classList.add('active'));
   }
 

@@ -260,6 +260,108 @@ button:hover .hover-arrow-icon {
   transform: translateX(4px);
 }
 
+/* ==========================================================================
+   MODERN UX CARD HOVERS & KINETIC MICRO-INTERACTIONS
+   ========================================================================== */
+
+/* Enhanced Card Kinetic Hover Lift & Emerald Glow */
+.project-card,
+.feat-card,
+.service-card,
+.contact-channel-card,
+.stat-item,
+.timeline-card,
+.editorial-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.25s ease,
+              background-color 0.25s ease;
+  will-change: transform, box-shadow;
+}
+
+.project-card:hover,
+.feat-card:hover,
+.service-card:hover,
+.contact-channel-card:hover,
+.editorial-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  box-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.8),
+              0 0 25px rgba(16, 185, 129, 0.12) !important;
+}
+
+.stat-item:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.7);
+}
+
+/* Image Scale & Subtle Contrast Bloom on Hover */
+.project-card .project-thumb,
+.project-card-image,
+.feat-card-image {
+  overflow: hidden;
+  border-radius: calc(var(--radius-lg, 12px) - 2px);
+}
+
+.project-card:hover .project-thumb img,
+.project-card:hover .project-card-image img,
+.feat-card:hover .feat-card-image img {
+  transform: scale(1.045);
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Portrait Image Smooth Grayscale-to-Color & Glow */
+.about-portrait-frame,
+.editorial-portrait {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+}
+
+.about-portrait-frame:hover,
+.editorial-portrait:hover {
+  transform: translateY(-5px) scale(1.01);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.85),
+              0 0 30px rgba(16, 185, 129, 0.18);
+}
+
+/* Social Buttons Interactive Glow */
+.social-cta-btn:hover {
+  transform: translateY(-3px) scale(1.01);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 12px 28px -6px rgba(0, 0, 0, 0.6), 0 0 20px rgba(16, 185, 129, 0.15);
+}
+
+/* Section Kicker Subtle Expanding Line Indicator */
+.section-kicker {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-primary, #10b981);
+  box-shadow: 0 0 8px var(--accent-primary, #10b981);
+  animation: pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* Button Active Press Micro-Interaction */
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.btn-outline:active {
+  transform: scale(0.97) !important;
+  transition: transform 0.08s ease !important;
+}
+
 /* Reduced Motion Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
