@@ -1764,8 +1764,8 @@ code, pre, .font-mono {
 
 /* --- Social Media CTA Card Section --- */
 .footer-cta-card {
-  background: linear-gradient(145deg, rgba(15, 23, 42, 0.8), rgba(11, 17, 32, 0.95));
-  border: 1px solid rgba(56, 189, 248, 0.2);
+  background: var(--bg-canvas, #0a0b0e);
+  border: 1px solid var(--border-medium);
   border-radius: var(--radius-xl);
   padding: 40px;
   margin-bottom: 56px;
@@ -1819,7 +1819,7 @@ code, pre, .font-mono {
 }
 
 .social-cta-btn {
-  background: rgba(18, 26, 45, 0.7);
+  background: var(--bg-surface, #111318);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: 22px 24px;
