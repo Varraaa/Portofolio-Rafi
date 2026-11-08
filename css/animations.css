@@ -76,6 +76,25 @@
 /* ==========================================================================
    Top Scroll Progress Bar
    ========================================================================== */
+/* ==========================================================================
+   Viewport Ambient Cursor Glow Spotlight
+   ========================================================================== */
+.viewport-ambient-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  background: radial-gradient(circle closest-side, rgba(16, 185, 129, 0.075), transparent 75%);
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+}
+
 .scroll-progress-bar {
   position: fixed;
   top: 0;

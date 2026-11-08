@@ -45,6 +45,46 @@
     updateScrollProgress();
   }
 
+  // --- 1.1 Global Viewport Ambient Glow / Cursor Spotlight ---
+  if (!prefersReduced && window.innerWidth > 768) {
+    let glow = document.getElementById('viewport-ambient-glow');
+    if (!glow) {
+      glow = document.createElement('div');
+      glow.id = 'viewport-ambient-glow';
+      glow.className = 'viewport-ambient-glow';
+      glow.setAttribute('aria-hidden', 'true');
+      document.body.prepend(glow);
+    }
+
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let currentX = mouseX;
+    let currentY = mouseY;
+    let isMoving = false;
+
+    window.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!isMoving) {
+        glow.style.opacity = '1';
+        isMoving = true;
+      }
+    }, { passive: true });
+
+    document.addEventListener('mouseleave', () => {
+      glow.style.opacity = '0';
+      isMoving = false;
+    });
+
+    function updateGlow() {
+      currentX += (mouseX - currentX) * 0.12;
+      currentY += (mouseY - currentY) * 0.12;
+      glow.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+      requestAnimationFrame(updateGlow);
+    }
+    requestAnimationFrame(updateGlow);
+  }
+
   // --- 2. Kinetic IntersectionObserver Scroll Reveal ---
   if (!prefersReduced && 'IntersectionObserver' in window) {
     const revealTargets = document.querySelectorAll(
