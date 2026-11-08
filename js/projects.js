@@ -40,6 +40,37 @@
       });
     }
 
+    function updateCategoryCounts() {
+      filterButtons.forEach(btn => {
+        const cat = (btn.dataset.category || 'all').toLowerCase();
+        let matchCount = 0;
+        projectCards.forEach(card => {
+          const category = (card.dataset.category || '').toLowerCase();
+          const tags = (card.dataset.tags || '').toLowerCase();
+          const title = (card.dataset.title || '').toLowerCase();
+          const desc = (card.dataset.desc || '').toLowerCase();
+
+          const matchesCategory = (cat === 'all') || (category.includes(cat)) || (tags.includes(cat));
+          const matchesSearch = !currentSearchTerm || 
+                                title.includes(currentSearchTerm) || 
+                                tags.includes(currentSearchTerm) || 
+                                desc.includes(currentSearchTerm);
+
+          if (matchesCategory && matchesSearch) {
+            matchCount++;
+          }
+        });
+
+        let badge = btn.querySelector('.filter-badge');
+        if (!badge) {
+          badge = document.createElement('span');
+          badge.className = 'filter-badge';
+          btn.appendChild(badge);
+        }
+        badge.textContent = matchCount;
+      });
+    }
+
     function applyFilters() {
       let visibleCount = 0;
 
@@ -63,6 +94,8 @@
           card.style.display = 'none';
         }
       });
+
+      updateCategoryCounts();
 
       // Update count text
       if (countIndicator) {
@@ -202,8 +235,24 @@
       }
     });
 
-    // Attach click to thumbnails & add zoom badge
+    // Attach click to thumbnails, zoom badge & quick-view buttons
     projectCards.forEach(card => {
+      // Add quick-view button to project actions if not present
+      const actions = card.querySelector('.project-actions');
+      if (actions && !actions.querySelector('.qv-trigger-btn')) {
+        const qvBtn = document.createElement('button');
+        qvBtn.type = 'button';
+        qvBtn.className = 'btn btn-outline btn-sm qv-trigger-btn';
+        qvBtn.innerHTML = '<span>🔍 Detail</span>';
+        qvBtn.style.padding = '4px 10px';
+        qvBtn.style.fontSize = '11px';
+        qvBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          openQuickView(card);
+        });
+        actions.appendChild(qvBtn);
+      }
       const thumb = card.querySelector('.project-thumb');
       if (thumb) {
         const zoomBadge = document.createElement('span');
