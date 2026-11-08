@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.0 Editorial Minimalist)
+# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.3 Modern Engineering)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Varraaa/Portofolio-Rafi/main/assets/jas.jpeg" alt="Muhammad Rafi Hibatulloh" width="120" style="border-radius: 50%;" />
@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.0_Editorial-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
+  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.3_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
   <a href="https://github.com/Varraaa"><img src="https://img.shields.io/badge/GitHub-Varraaa-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://wa.me/6281297577567"><img src="https://img.shields.io/badge/WhatsApp-Contact_Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"></a>
 </p>
@@ -25,7 +25,14 @@ Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** murni (HTM
 
 ---
 
-## ✨ Fitur & Keunggulan Desain v3.2
+## ✨ Fitur & Keunggulan Desain v3.3 (Modern Release)
+
+- 💡 **Ambient Viewport Cursor Spotlight**: Efek pencahayaan kursor halus 60fps dengan pelacakan fisika lerp di atas canvas mesh emerald gelap (`#0a0b0e`).
+- 🏷️ **Modern Hero Status Pill**: Indikator status profesional non-intrusif ("Open for Work & Internships • Full-Stack RPL") dan chip salin email instan.
+- 🔍 **Live Category Counters & Quick-View Modal**: Penghitung kuantitas real-time pada setiap tab filter proyek dan modal pratinjau cepat tanpa harus meninggalkan halaman.
+- 📅 **Upgraded Timeline Milestones Card**: Kartu riwayat akademis terstruktur dengan pill badge tahun, status aktif, dan chip kompetensi.
+- ⌨️ **Advanced Command Palette (Ctrl+K)**: Pencarian cepat dengan shortcut unduh resume/CV, navigasi proyek, dan aksi clipboard.
+
 
 - 🌿 **Refined Muted Emerald Accent**: Aksen warna hijau zamrud tenang (`#10b981`), menyatu harmonis dengan palet *dark ink* tanpa silau neon.
 - 🔤 **Editorial Typography**: Menggunakan *Bricolage Grotesque* untuk judul display yang tegas berpadu dengan *Plus Jakarta Sans* untuk body text dan *JetBrains Mono* untuk indikator teknis.

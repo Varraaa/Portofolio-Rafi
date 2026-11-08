@@ -94,7 +94,9 @@
     { label: 'Clouds Flight Booking Proyek', category: 'Proyek', url: 'projects.html', icon: '✈️' },
     { label: 'Kunjungi GitHub (@Varraaa)', category: 'Tautan Eksternal', external: 'https://github.com/Varraaa', icon: '🐙' },
     { label: 'Kirim WhatsApp (+62 812-9757-7567)', category: 'Tautan Eksternal', external: 'https://wa.me/6281297577567', icon: '💬' },
-    { label: 'Salin Email ke Clipboard', category: 'Aksi Cepat', action: 'copy-email', icon: '📋' }
+    { label: 'Unduh Resume / CV Resmi (PDF)', category: 'Aksi Cepat', url: 'assets/resume.pdf', icon: '📄' },
+    { label: 'Salin Email ke Clipboard', category: 'Aksi Cepat', action: 'copy-email', icon: '📋' },
+    { label: 'Kembali ke Atas Halaman', category: 'Aksi Cepat', action: 'scroll-top', icon: '⬆️' }
   ];
 
   function createCommandPalette() {
@@ -169,6 +171,9 @@
         navigator.clipboard.writeText('mrafi.hiba@gmail.com').then(() => {
           window.showToast('Email mrafi.hiba@gmail.com disalin ke clipboard!');
         });
+      } else if (cmd.action === 'scroll-top') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.showToast('Kembali ke puncak halaman');
       } else if (cmd.external) {
         window.open(cmd.external, '_blank', 'noopener,noreferrer');
       } else if (cmd.url) {
