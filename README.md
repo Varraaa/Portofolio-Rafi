@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.3 Modern Engineering)
+# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.4 Modern Engineering)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Varraaa/Portofolio-Rafi/main/assets/jas.jpeg" alt="Muhammad Rafi Hibatulloh" width="120" style="border-radius: 50%;" />
@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.3_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
+  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.4_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
   <a href="https://github.com/Varraaa"><img src="https://img.shields.io/badge/GitHub-Varraaa-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://wa.me/6281297577567"><img src="https://img.shields.io/badge/WhatsApp-Contact_Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"></a>
 </p>
@@ -25,7 +25,13 @@ Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** murni (HTM
 
 ---
 
-## ✨ Fitur & Keunggulan Desain v3.3 (Modern Release)
+## ✨ Fitur & Keunggulan Desain v3.4 (Modern Release)
+
+- 🖥️ **Interactive Multi-Tab Terminal Simulator**: Terminal CLI interaktif di halaman utama dengan 3 tab berkas (`whoami.sh`, `stack.json`, `status.env`), output syntax-highlighting dinamis, dan tombol salin data instan.
+- 🎯 **Landing Page Filter Pills (Featured Works)**: Filter tab interaktif pada bagian Proyek Unggulan (`Semua Pilihan`, `Full-Stack & Laravel`, `Frontend Modern`) dengan transisi halus tanpa reload.
+- ⚡ **Dynamic Sticky Navbar Elevation & Scrollspy**: Header navbar cerdas dengan elevasi visual saat discroll (`.navbar.scrolled`), backdrop blur intensif, dan indikator progres membaca halaman di bagian atas.
+- 📬 **Direct Channels Vector SVGs & Quota Progress**: Ikon vektor SVG resmi untuk saluran kontak (WhatsApp, Email, GitHub, IG), badge responsif (`⚡ < 2 Jam`), dan bar pengukur kuota karakter pesan interaktif.
+- ⌨️ **Pro Keyboard Shortcuts**: Akses cepat Command Palette dengan `⌘K / Ctrl+K` atau cukup tekan tombol `?` di sembarang halaman, dilengkapi toast notifikasi terstruktur.
 
 - 💡 **Ambient Viewport Cursor Spotlight**: Efek pencahayaan kursor halus 60fps dengan pelacakan fisika lerp di atas canvas mesh emerald gelap (`#0a0b0e`).
 - 🏷️ **Modern Hero Status Pill**: Indikator status profesional non-intrusif ("Open for Work & Internships • Full-Stack RPL") dan chip salin email instan.

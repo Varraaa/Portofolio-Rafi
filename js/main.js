@@ -87,7 +87,7 @@
   });
 
   // --- 4. Toast Notification Utility ---
-  window.showToast = function (message, duration = 3000) {
+  window.showToast = function (message, duration = 3000, icon = '✓') {
     let toast = document.getElementById('global-toast');
     if (!toast) {
       toast = document.createElement('div');
@@ -95,7 +95,7 @@
       toast.className = 'toast';
       document.body.appendChild(toast);
     }
-    toast.innerHTML = `<span>✨</span> <span>${message}</span>`;
+    toast.innerHTML = `<span style="display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border-radius:50%; background:rgba(16,185,129,0.2); color:var(--accent-emerald); font-size:11px; font-weight:bold; flex-shrink:0;">${icon}</span> <span>${message}</span>`;
     toast.classList.add('visible');
 
     clearTimeout(toast._timeout);
@@ -262,9 +262,15 @@
 
   createCommandPalette();
 
-  // Shortcut Listener: Ctrl+K / Cmd+K
+  // Shortcut Listener: Ctrl+K / Cmd+K and ?
   document.addEventListener('keydown', function (e) {
+    const isInput = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (window.openCommandPalette) {
+        window.openCommandPalette();
+      }
+    } else if (e.key === '?' && !isInput) {
       e.preventDefault();
       if (window.openCommandPalette) {
         window.openCommandPalette();
