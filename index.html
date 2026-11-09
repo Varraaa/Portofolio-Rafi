@@ -166,9 +166,14 @@
               <span class="terminal-dot dot-amber"></span>
               <span class="terminal-dot dot-green"></span>
             </div>
-            <span class="terminal-title">rafi-dev@terminal ~ zsh</span>
+            <!-- Interactive Terminal File Tabs -->
+            <div class="terminal-tabs" role="tablist">
+              <button type="button" class="term-tab active" data-tab="whoami">whoami.sh</button>
+              <button type="button" class="term-tab" data-tab="stack">stack.json</button>
+              <button type="button" class="term-tab" data-tab="status">status.env</button>
+            </div>
             <div style="display:flex; align-items:center; gap:8px;">
-              <span style="font-size:10px; color:var(--text-dim);">UTF-8</span>
+              <span style="font-size:10px; color:var(--text-dim); font-family:var(--font-mono);">zsh</span>
             </div>
           </div>
           <div class="terminal-body" id="typed-output">

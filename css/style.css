@@ -747,6 +747,38 @@ code, pre, .font-mono {
 .dot-amber { background: #f59e0b; }
 .dot-green { background: #10b981; }
 
+
+/* Terminal Tabs */
+.terminal-tabs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.term-tab {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.term-tab:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.term-tab.active {
+  color: var(--accent-primary);
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.25);
+  font-weight: 600;
+}
+
 .terminal-title {
   font-size: 11px;
   color: var(--text-muted);

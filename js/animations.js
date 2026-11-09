@@ -197,6 +197,63 @@
     }
   }
 
+  // --- 4.1 Interactive Terminal Tabs Controller ---
+  const termTabs = document.querySelectorAll('.term-tab');
+  const termBody = document.getElementById('typed-output');
+  if (termTabs.length && termBody) {
+    const tabContents = {
+      whoami: `
+        <div style="margin-bottom:8px;">
+          <span class="prompt-cyan">visitor@rafi-dev:~$</span> <span class="font-mono" style="color:var(--text-primary);">whoami --verbose</span>
+        </div>
+        <div><span class="prompt-emerald">✓</span> Muhammad Rafi Hibatulloh</div>
+        <div><span class="prompt-emerald">✓</span> Full-Stack Web Developer</div>
+        <div><span class="prompt-emerald">✓</span> Stack: Laravel • PHP • JavaScript • Modern CSS • MySQL</div>
+        <div><span class="prompt-emerald">✓</span> Status: Terbuka untuk magang &amp; proyek web</div>
+        <div style="margin-top:10px;"><span class="prompt-cyan">visitor@rafi-dev:~$</span> <span class="cursor-blink"></span></div>
+      `,
+      stack: `
+        <div style="margin-bottom:8px;">
+          <span class="prompt-cyan">visitor@rafi-dev:~$</span> <span class="font-mono" style="color:var(--text-primary);">cat stack.json</span>
+        </div>
+        <div style="color:var(--accent-secondary); font-family:var(--font-mono); font-size:11.5px; line-height:1.7;">
+          {\n
+          &nbsp;&nbsp;<span style="color:#38bdf8;">"name"</span>: <span style="color:#34d399;">"Muhammad Rafi Hibatulloh"</span>,\n
+          &nbsp;&nbsp;<span style="color:#38bdf8;">"primary_backend"</span>: [<span style="color:#34d399;">"Laravel 11"</span>, <span style="color:#34d399;">"PHP 8.x"</span>, <span style="color:#34d399;">"MySQL"</span>],\n
+          &nbsp;&nbsp;<span style="color:#38bdf8;">"frontend_core"</span>: [<span style="color:#34d399;">"HTML5 Semantik"</span>, <span style="color:#34d399;">"Tailwind CSS"</span>, <span style="color:#34d399;">"Modern ES6+"</span>],\n
+          &nbsp;&nbsp;<span style="color:#38bdf8;">"tools_workflow"</span>: [<span style="color:#34d399;">"Git"</span>, <span style="color:#34d399;">"GitHub"</span>, <span style="color:#34d399;">"Vercel"</span>, <span style="color:#34d399;">"Postman"</span>],\n
+          &nbsp;&nbsp;<span style="color:#38bdf8;">"architecture"</span>: <span style="color:#34d399;">"MVC &amp; Clean Code Structure"</span>\n
+          }
+        </div>
+        <div style="margin-top:10px;"><span class="prompt-cyan">visitor@rafi-dev:~$</span> <span class="cursor-blink"></span></div>
+      `,
+      status: `
+        <div style="margin-bottom:8px;">
+          <span class="prompt-cyan">visitor@rafi-dev:~$</span> <span class="font-mono" style="color:var(--text-primary);">source .env &amp;&amp; env | grep -E "STATUS|CONTACT"</span>
+        </div>
+        <div style="color:#a7f3d0; font-family:var(--font-mono); font-size:11.5px; line-height:1.7;">
+          <span style="color:#94a3b8;">DEVELOPER_STATUS</span>=<span style="color:var(--accent-emerald);">OPEN_FOR_INTERNSHIP</span>\n
+          <span style="color:#94a3b8;">PROJECT_STATUS</span>=<span style="color:var(--accent-emerald);">AVAILABLE_FOR_FREELANCE</span>\n
+          <span style="color:#94a3b8;">TIMEZONE</span>=<span style="color:var(--accent-emerald);">ASIA_JAKARTA_WIB</span>\n
+          <span style="color:#94a3b8;">PRIMARY_EMAIL</span>=<span style="color:#38bdf8;">mrafi.hiba@gmail.com</span>\n
+          <span style="color:#94a3b8;">GITHUB_PROFILE</span>=<span style="color:#38bdf8;">github.com/Varraaa</span>
+        </div>
+        <div style="margin-top:10px;"><span class="prompt-cyan">visitor@rafi-dev:~$</span> <span class="cursor-blink"></span></div>
+      `
+    };
+
+    termTabs.forEach(tab => {
+      tab.addEventListener('click', function () {
+        termTabs.forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const tabKey = this.dataset.tab;
+        if (tabContents[tabKey]) {
+          termBody.innerHTML = tabContents[tabKey].trim();
+        }
+      });
+    });
+  }
+
   // --- 5. Interactive Counter Animation (Automatic On Load & On Scroll) ---
   const statValues = document.querySelectorAll('.stat-value[data-counter-target]');
   if (statValues.length > 0) {
