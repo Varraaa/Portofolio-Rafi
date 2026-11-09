@@ -254,6 +254,28 @@
     });
   }
 
+  // --- 4.2 Home Featured Projects Filter Controller ---
+  const homeFilters = document.querySelectorAll('[data-home-filter]');
+  const homeCards = document.querySelectorAll('#home-featured-grid > article[data-home-category]');
+  if (homeFilters.length && homeCards.length) {
+    homeFilters.forEach(btn => {
+      btn.addEventListener('click', function () {
+        homeFilters.forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filterVal = this.dataset.homeFilter;
+        homeCards.forEach(card => {
+          const cat = card.dataset.homeCategory;
+          if (filterVal === 'all' || cat === filterVal) {
+            card.style.display = 'flex';
+            card.classList.add('active');
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+
   // --- 5. Interactive Counter Animation (Automatic On Load & On Scroll) ---
   const statValues = document.querySelectorAll('.stat-value[data-counter-target]');
   if (statValues.length > 0) {

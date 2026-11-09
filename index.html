@@ -223,9 +223,16 @@
           </a>
         </div>
 
-        <div class="grid-3">
+        <!-- Home Featured Interactive Filter Pills -->
+        <div class="home-featured-filters" style="display:flex; gap:8px; margin-bottom:var(--space-6); flex-wrap:wrap;">
+          <button type="button" class="filter-btn active" data-home-filter="all">Semua Pilihan</button>
+          <button type="button" class="filter-btn" data-home-filter="fullstack">Full-Stack &amp; Laravel</button>
+          <button type="button" class="filter-btn" data-home-filter="frontend">Frontend Modern</button>
+        </div>
+
+        <div class="grid-3" id="home-featured-grid">
           <!-- Card 1: Kantin Ambu POS -->
-          <article class="card card-flush project-card tilt-card spotlight-card reveal">
+          <article class="card card-flush project-card tilt-card spotlight-card reveal" data-home-category="fullstack">
             <div class="project-thumb">
               <img src="assets/project/KantinAmbu.jpeg" alt="Tangkapan layar Web Kantin Ambu POS" loading="lazy">
             </div>
@@ -257,7 +264,7 @@
           </article>
 
           <!-- Card 2: Clouds Booking Pesawat -->
-          <article class="card card-flush project-card tilt-card spotlight-card reveal reveal-delay-1">
+          <article class="card card-flush project-card tilt-card spotlight-card reveal reveal-delay-1" data-home-category="fullstack">
             <div class="project-thumb">
               <img src="assets/project/Clouds.jpeg" alt="Tangkapan layar Web Booking Pesawat Clouds" loading="lazy">
             </div>
@@ -290,7 +297,7 @@
           </article>
 
           <!-- Card 3: Zenition Landing Page -->
-          <article class="card card-flush project-card tilt-card spotlight-card reveal reveal-delay-2">
+          <article class="card card-flush project-card tilt-card spotlight-card reveal reveal-delay-2" data-home-category="frontend">
             <div class="project-thumb">
               <img src="assets/project/Zenition.jpeg" alt="Tangkapan layar Landing Page Zenition" loading="lazy">
             </div>
