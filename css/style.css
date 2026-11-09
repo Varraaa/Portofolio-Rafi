@@ -1529,6 +1529,11 @@ code, pre, .font-mono {
   transform: translateX(4px);
 }
 
+.contact-channel-card:hover .channel-icon-box {
+  transform: scale(1.08) rotate(2deg);
+  transition: transform var(--transition-bounce);
+}
+
 .channel-icon-box {
   width: 44px;
   height: 44px;
