@@ -50,7 +50,30 @@
     });
   }
 
-  // --- 3. Active Link Auto-Detection ---
+  // --- 3. Dynamic Navbar Elevation, Scroll Progress & Active Link Detection ---
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    const navScrollLine = document.createElement('div');
+    navScrollLine.className = 'scroll-progress-line';
+    navbar.appendChild(navScrollLine);
+
+    const handleNavbarScroll = function () {
+      if (window.scrollY > 30) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+      navScrollLine.style.width = scrolled + '%';
+    };
+
+    window.addEventListener('scroll', handleNavbarScroll, { passive: true });
+    handleNavbarScroll();
+  }
+
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   const navLinks = document.querySelectorAll('.nav-item, .mobile-nav-link');
 
