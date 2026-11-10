@@ -1738,12 +1738,12 @@ code, pre, .font-mono {
 }
 
 .palette-modal {
-  background: #0d1527;
-  border: 1px solid var(--border-medium);
+  background: #0d1017;
+  border: 1px solid rgba(16, 185, 129, 0.25);
   border-radius: var(--radius-lg);
   width: 100%;
   max-width: 580px;
-  box-shadow: var(--shadow-lg), 0 0 50px -10px rgba(56, 189, 248, 0.35);
+  box-shadow: var(--shadow-lg), 0 0 50px -10px rgba(16, 185, 129, 0.2);
   overflow: hidden;
   animation: modalPopIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
