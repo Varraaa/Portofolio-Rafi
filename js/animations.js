@@ -144,6 +144,8 @@
         if (card.classList.contains('tilt-card')) {
           card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
         }
+        card.style.setProperty('--mouse-x', '-999px');
+        card.style.setProperty('--mouse-y', '-999px');
       });
     });
   }
