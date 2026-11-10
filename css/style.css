@@ -2724,3 +2724,10 @@ code, pre, .font-mono {
   opacity: 1;
   transform: translateY(0);
 }
+
+.tech-card-icon-box {
+  transition: transform var(--transition-bounce);
+}
+.card:hover .tech-card-icon-box {
+  transform: scale(1.08) translateY(-2px);
+}
