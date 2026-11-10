@@ -301,6 +301,19 @@
     timeEl.textContent = `${timeStr} WIB`;
   }
   updateFooterClock();
+  // Universal Clipboard Helper
+  window.copyToClipboard = function (text, message = 'Berhasil disalin!') {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(() => {
+        window.showToast(message);
+      }).catch(() => {
+        window.showToast(`Salin: ${text}`);
+      });
+    } else {
+      window.showToast(`Salin: ${text}`);
+    }
+  };
+
   // Global Quick Copy Email
   window.copyEmailToClipboard = function (email = 'mrafi.hiba@gmail.com') {
     if (navigator.clipboard && navigator.clipboard.writeText) {

@@ -2731,3 +2731,46 @@ code, pre, .font-mono {
 .card:hover .tech-card-icon-box {
   transform: scale(1.08) translateY(-2px);
 }
+
+.hero-command-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  width: fit-content;
+}
+.hero-command-pill:hover {
+  border-color: var(--accent-primary);
+  background: rgba(16, 185, 129, 0.08);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+.cmd-pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent-primary);
+  font-size: 11px;
+  font-weight: 600;
+}
+.cmd-pill-code {
+  color: var(--text-muted);
+}
+.hero-command-pill:hover .cmd-pill-code {
+  color: var(--text-primary);
+}
+.cmd-pill-action {
+  font-size: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: var(--text-dim);
+}
