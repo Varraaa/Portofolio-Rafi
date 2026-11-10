@@ -4,8 +4,8 @@
   "description": "Portofolio resmi M Rafi Hibatulloh, Web Developer spesialis Laravel, PHP, JavaScript ES6+, dan modern CSS.",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#070a13",
-  "theme_color": "#070a13",
+  "background_color": "#0a0b0e",
+  "theme_color": "#0a0b0e",
   "orientation": "portrait-primary",
   "icons": [
     {

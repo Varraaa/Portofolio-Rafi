@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.4 Modern Engineering)
+# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.5 Modern Engineering)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Varraaa/Portofolio-Rafi/main/assets/jas.jpeg" alt="Muhammad Rafi Hibatulloh" width="120" style="border-radius: 50%;" />
@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.4_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
+  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.5_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
   <a href="https://github.com/Varraaa"><img src="https://img.shields.io/badge/GitHub-Varraaa-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://wa.me/6281297577567"><img src="https://img.shields.io/badge/WhatsApp-Contact_Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"></a>
 </p>
@@ -25,7 +25,16 @@ Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** murni (HTM
 
 ---
 
-## ✨ Fitur & Keunggulan Desain v3.4 (Modern Release)
+## ✨ Fitur & Keunggulan Desain v3.5 (Modern Release)
+
+- 🎨 **Authentic Vector SVG Iconography**: Pembaruan menyeluruh dari emoji ke ikon vektor SVG resmi dengan palet aksen zamrud & cyan di seluruh bagian kemampuan teknis dan bento grid.
+- 💻 **Hero CLI Command Chip & Universal Clipboard**: Chip perintah developer interaktif (`curl -sL github.com/Varraaa`) dengan feedback notifikasi toast dan salin instan.
+- 🏷️ **Polished Status Badges & Clean Empty States**: Penggantian seluruh karakter dot dengan status badge modern (`Sedang Aktif`, `Selesai`, `Aktif Setiap Hari`) serta ikon SVG pencarian pada empty state.
+- ⌨️ **Raycast-Grade Command Palette**: Dialog pencarian global cepat dengan ikon vektor SVG terstruktur, badge penanda aksi (`GOTO`, `ACTION`, `LINK ↗`), dan palet *dark ink* elegan.
+- 🌐 **Global Footer Status Chip & Social Icon Buttons**: Standarisasi ketersediaan profesional ("Open for Work & Internships 2026") dan tombol ikon media sosial SVG resmi di kelima halaman.
+- 🎯 **Advanced UX Micro-Interactions**: Highlight seleksi teks aksen zamrud (`::selection`), ring fokus keyboard aksesibel (`:focus-visible`), dan transisi spotlight mouseleave fade halus.
+
+### 📦 Riwayat Fitur v3.4
 
 - 🖥️ **Interactive Multi-Tab Terminal Simulator**: Terminal CLI interaktif di halaman utama dengan 3 tab berkas (`whoami.sh`, `stack.json`, `status.env`), output syntax-highlighting dinamis, dan tombol salin data instan.
 - 🎯 **Landing Page Filter Pills (Featured Works)**: Filter tab interaktif pada bagian Proyek Unggulan (`Semua Pilihan`, `Full-Stack & Laravel`, `Frontend Modern`) dengan transisi halus tanpa reload.
