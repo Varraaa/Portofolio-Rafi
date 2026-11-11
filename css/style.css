@@ -1456,9 +1456,9 @@ code, pre, .font-mono {
 }
 
 .tech-badge-item:hover {
-  background: rgba(56, 189, 248, 0.08);
-  border-color: rgba(56, 189, 248, 0.2);
-  transform: translateX(3px);
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.25);
+  transform: translateX(4px);
 }
 
 .tech-badge-name {
