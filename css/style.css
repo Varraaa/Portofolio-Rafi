@@ -1626,8 +1626,9 @@ code, pre, .font-mono {
 .form-textarea:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px var(--accent-primary-subtle);
-  background: #0e172a;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.16);
+  background: #0f1219;
+  transform: translateY(-1px);
 }
 
 .form-input.is-invalid,
