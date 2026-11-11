@@ -152,7 +152,10 @@
 
   // --- 4. Terminal Typing Animation (Hero Section) ---
   const typedEl = document.getElementById('typed-output');
-  if (typedEl) {
+  const termReplayBtn = document.getElementById('term-replay-btn');
+
+  function startTypingSimulation() {
+    if (!typedEl) return;
     const lines = [
       'Muhammad Rafi Hibatulloh',
       'Full-Stack Web Developer',
@@ -160,8 +163,19 @@
       'Status: Terbuka untuk magang & proyek web'
     ];
 
+    typedEl.innerHTML = `
+      <div style="margin-bottom:8px;">
+        <span class="prompt-cyan">visitor@rafi-dev:~$</span> <span class="font-mono" style="color:var(--text-primary);">whoami --verbose</span>
+      </div>
+    `;
+
+    document.querySelectorAll('.term-tab').forEach(t => {
+      if (t.dataset.tab === 'whoami') t.classList.add('active');
+      else t.classList.remove('active');
+    });
+
     if (prefersReduced) {
-      typedEl.innerHTML = lines.map(line => `<div><span class="prompt-emerald">✓</span> ${line}</div>`).join('');
+      typedEl.innerHTML += lines.map(line => `<div><span class="prompt-emerald">✓</span> ${line}</div>`).join('');
     } else {
       let lineIndex = 0;
       let charIndex = 0;
@@ -180,14 +194,13 @@
           if (charIndex < currentLine.length) {
             lineDiv.innerHTML += currentLine.charAt(charIndex);
             charIndex++;
-            setTimeout(typeNextChar, 28);
+            setTimeout(typeNextChar, 25);
           } else {
             lineIndex++;
             charIndex = 0;
-            setTimeout(typeNextChar, 200);
+            setTimeout(typeNextChar, 180);
           }
         } else {
-          // Completed typing: append blinking cursor prompt
           const cursorDiv = document.createElement('div');
           cursorDiv.style.marginTop = '10px';
           cursorDiv.innerHTML = `<span class="prompt-cyan">visitor@rafi-dev:~$</span> <span class="cursor-blink"></span>`;
@@ -195,7 +208,17 @@
         }
       }
 
-      setTimeout(typeNextChar, 400);
+      setTimeout(typeNextChar, 300);
+    }
+  }
+
+  if (typedEl) {
+    startTypingSimulation();
+    if (termReplayBtn) {
+      termReplayBtn.addEventListener('click', function () {
+        startTypingSimulation();
+        if (window.showToast) window.showToast('Simulasi terminal dimulai ulang');
+      });
     }
   }
 
