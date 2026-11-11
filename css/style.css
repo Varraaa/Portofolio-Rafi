@@ -2344,15 +2344,15 @@ code, pre, .font-mono {
   width: 48px;
   height: 48px;
   border-radius: var(--radius-full);
-  background: var(--accent-primary);
-  border: 1px solid var(--accent-primary);
-  color: #0a0b0e;
+  background: rgba(13, 16, 23, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--accent-primary);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 990;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 16px rgba(56, 189, 248, 0.12);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.7), 0 0 16px rgba(16, 185, 129, 0.15);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   opacity: 0;
@@ -2364,6 +2364,23 @@ code, pre, .font-mono {
               background 0.2s ease,
               border-color 0.2s ease,
               box-shadow 0.2s ease;
+}
+
+.progress-ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+  pointer-events: none;
+}
+
+.progress-ring-circle {
+  transition: stroke-dashoffset 0.1s ease-out;
+}
+
+.progress-ring-arrow {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.2s ease;
 }
 
 .back-to-top-btn.visible {

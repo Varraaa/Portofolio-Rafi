@@ -355,19 +355,29 @@
     }
   };
 
-  // --- 7. Floating Back to Top Button Controller ---
+  // --- 7. Floating Back to Top Button Controller with Circular Progress Ring ---
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
+    const progressCircle = backToTopBtn.querySelector('.progress-ring-circle');
+    const circumference = 2 * Math.PI * 21; // ~131.95
+
     const handleScroll = function () {
-      if (window.scrollY > 300) {
+      const scrollY = window.scrollY;
+      if (scrollY > 250) {
         backToTopBtn.classList.add('visible');
       } else {
         backToTopBtn.classList.remove('visible');
       }
+
+      if (progressCircle) {
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = height > 0 ? scrollY / height : 0;
+        const offset = circumference - (progress * circumference);
+        progressCircle.style.strokeDashoffset = Math.max(0, offset);
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    // Check initial state
     handleScroll();
 
     backToTopBtn.addEventListener('click', function (e) {
