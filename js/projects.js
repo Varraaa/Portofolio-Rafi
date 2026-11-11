@@ -142,6 +142,17 @@
 
     // Initial run
     applyFilters();
+    // Keyboard shortcut: Press "/" to focus project search
+    document.addEventListener('keydown', function (e) {
+      const isInput = ['INPUT', 'TEXTAREA', 'SELECT'].includes(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
+      if (e.key === '/' && !isInput && searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+      } else if (e.key === 'Escape' && document.activeElement === searchInput) {
+        searchInput.blur();
+      }
+    });
 
     // --- 6. Project Quick-View Modal Controller ---
     const qvModal = document.getElementById('project-quickview-modal');
@@ -243,7 +254,7 @@
         const qvBtn = document.createElement('button');
         qvBtn.type = 'button';
         qvBtn.className = 'btn btn-outline btn-sm qv-trigger-btn';
-        qvBtn.innerHTML = '<span>🔍 Detail</span>';
+        qvBtn.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>Detail</span>';
         qvBtn.style.padding = '4px 10px';
         qvBtn.style.fontSize = '11px';
         qvBtn.addEventListener('click', (e) => {
@@ -257,7 +268,7 @@
       if (thumb) {
         const zoomBadge = document.createElement('span');
         zoomBadge.className = 'project-thumb-zoom-badge';
-        zoomBadge.textContent = '🔍 Pratinjau';
+        zoomBadge.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block; vertical-align:middle; margin-right:4px;"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><span>Pratinjau</span>';
         thumb.appendChild(zoomBadge);
 
         thumb.addEventListener('click', function (e) {
