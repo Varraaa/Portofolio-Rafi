@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.5 Modern Engineering)
+# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.6 Modern Engineering)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Varraaa/Portofolio-Rafi/main/assets/jas.jpeg" alt="Muhammad Rafi Hibatulloh" width="120" style="border-radius: 50%;" />
@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.5_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
+  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.6_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
   <a href="https://github.com/Varraaa"><img src="https://img.shields.io/badge/GitHub-Varraaa-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://wa.me/6281297577567"><img src="https://img.shields.io/badge/WhatsApp-Contact_Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"></a>
 </p>
@@ -25,7 +25,16 @@ Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** murni (HTM
 
 ---
 
-## ✨ Fitur & Keunggulan Desain v3.5 (Modern Release)
+## ✨ Fitur & Keunggulan Desain v3.6 (Modern Release)
+
+- 🔄 **Circular Scroll Reading Progress Ring**: Tombol navigasi floating back-to-top interaktif dengan visual meter lingkaran SVG (`stroke-dasharray/offset`) yang melacak progres pembacaan halaman secara real-time di kelima halaman web.
+- 🔁 **Hero Terminal Replay Simulator**: Tombol kontrol putar ulang interaktif (`#term-replay-btn`) pada header terminal CLI Unix di halaman beranda dengan reset pengetikan teks berkecepatan 25ms dan notifikasi toast.
+- ⌨️ **Instant Project Search Shortcut (`/`)**: Akses cepat pencarian katalog proyek di `projects.html` cukup dengan menekan tombol keyboard `/`, dilengkapi visual keycap badge kustom.
+- 🏷️ **Bento Tech Stack Proficiency Pills**: Peningkatan kartu kapabilitas teknis di `about.html` dengan badge kemahiran resmi (`Daily Driver`, `Core Stack`, `Workflow`) dan hover transform aksen zamrud.
+- 📬 **Vector SVG Modal & Contact Dispatch**: Modernisasi dialog modal konfirmasi pesan di `contact.html` dengan ikon vektor SVG WhatsApp, Email, dan Clipboard resmi beresolusi tinggi.
+- 🛡️ **Unified Dark Ink & Accessible Micro-Interactions**: Ring fokus navigasi keyboard `:focus-visible`, pewarnaan seleksi teks kustom `::selection` zamrud, serta sinkronisasi tema PWA `manifest.json`.
+
+### 📦 Riwayat Fitur v3.5
 
 - 🎨 **Authentic Vector SVG Iconography**: Pembaruan menyeluruh dari emoji ke ikon vektor SVG resmi dengan palet aksen zamrud & cyan di seluruh bagian kemampuan teknis dan bento grid.
 - 💻 **Hero CLI Command Chip & Universal Clipboard**: Chip perintah developer interaktif (`curl -sL github.com/Varraaa`) dengan feedback notifikasi toast dan salin instan.
