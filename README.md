@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.6 Modern Engineering)
+# 🌐 Personal Portfolio — Muhammad Rafi Hibatulloh (v3.7 Modern Engineering)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/Varraaa/Portofolio-Rafi/main/assets/jas.jpeg" alt="Muhammad Rafi Hibatulloh" width="120" style="border-radius: 50%;" />
@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.6_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
+  <a href="https://github.com/Varraaa/Portofolio-Rafi"><img src="https://img.shields.io/badge/Release-v3.7_Modern-10b981?style=for-the-badge&logo=git&logoColor=white" alt="Status"></a>
   <a href="https://github.com/Varraaa"><img src="https://img.shields.io/badge/GitHub-Varraaa-181717?style=for-the-badge&logo=github" alt="GitHub"></a>
   <a href="https://wa.me/6281297577567"><img src="https://img.shields.io/badge/WhatsApp-Contact_Me-25D366?style=for-the-badge&logo=whatsapp" alt="WhatsApp"></a>
 </p>
@@ -25,7 +25,15 @@ Website ini dibangun menggunakan prinsip **Vanilla Web Architecture** murni (HTM
 
 ---
 
-## ✨ Fitur & Keunggulan Desain v3.6 (Modern Release)
+## ✨ Fitur & Keunggulan Desain v3.7 (Modern Release)
+
+- 🌊 **Coordinate-Aware Soundless Click Ripple Micro-Interactions**: Animasi ripple gelombang sentuh halus berbasis posisi koordinat klik pada seluruh tombol interaktif (`.btn`, `.filter-btn`, `.term-tab`, `.hero-command-pill`, `.hero-quick-prompt`) tanpa efek suara, memberikan umpan balik taktil visual yang presisi dan elegan.
+- 🏷️ **1-Click Technology Tag Filter Navigation**: Interaksi klik langsung pada setiap badge tag teknologi di kartu katalog proyek (`projects.html`) yang secara instan menyaring daftar proyek, memfokuskan bar pencarian, menampilkan toast notifikasi interaktif, dan scroll mulus ke toolbar navigasi.
+- 🎖️ **Elevated Credentials & Licensing Showcase**: Peningkatan visual kartu sertifikasi dan lisensi di `about.html` dengan ikon penghargaan vektor SVG beresolusi tinggi, visual badge kompetensi (`Laravel 11`, `Filament`, `Midtrans`, `JavaScript ES6+`, `AI Fundamentals`), serta penghapusan total sisa pendaran neon pada titik timeline.
+- 🔍 **Structured JSON-LD Schema.org SEO Integration**: Injeksi metadata semantik terstruktur Schema.org (`Person`, `WebSite`, `ProfilePage`, `hasCredential`) pada `index.html` dan `about.html` untuk memfasilitasi Google Rich Search Results, Knowledge Graph, dan pengenalan profil teknis resmi secara global.
+- 🖤 **Unified Dark Ink Architecture & Zero-Slop Consistency**: Penyatuan tema gelap profesional `#0a0b0e` dan `#111318` dengan aksen tenang *Muted Emerald* (`#10b981`), arsitektur bebas elemen AI-slop, nol dot neon berdenyut, dan tata letak responsif mulus di perangkat Desktop, Tablet, dan Mobile.
+
+### 📦 Riwayat Fitur v3.6
 
 - 🔄 **Circular Scroll Reading Progress Ring**: Tombol navigasi floating back-to-top interaktif dengan visual meter lingkaran SVG (`stroke-dasharray/offset`) yang melacak progres pembacaan halaman secara real-time di kelima halaman web.
 - 🔁 **Hero Terminal Replay Simulator**: Tombol kontrol putar ulang interaktif (`#term-replay-btn`) pada header terminal CLI Unix di halaman beranda dengan reset pengetikan teks berkecepatan 25ms dan notifikasi toast.
