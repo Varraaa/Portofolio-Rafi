@@ -990,6 +990,18 @@ code, pre, .font-mono {
   margin-bottom: var(--space-6);
 }
 
+.project-tags .badge {
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.project-tags .badge:hover {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+
 .project-actions {
   display: flex;
   align-items: center;

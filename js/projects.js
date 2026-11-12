@@ -153,6 +153,29 @@
         searchInput.blur();
       }
     });
+    // Interactive Tech Tag Click Filter
+    document.querySelectorAll('.project-tags .badge').forEach(tagBadge => {
+      tagBadge.title = `Klik untuk memfilter proyek dengan teknologi ${tagBadge.textContent.trim()}`;
+      tagBadge.addEventListener('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const tagText = this.textContent.trim();
+        if (searchInput) {
+          searchInput.value = tagText;
+          currentSearchTerm = tagText.toLowerCase();
+          applyFilters();
+          searchInput.focus();
+          if (window.showToast) {
+            window.showToast(`Menampilkan proyek dengan tag: ${tagText}`);
+          }
+          const toolbar = document.querySelector('.projects-filter-bar');
+          if (toolbar) {
+            toolbar.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+
 
     // --- 6. Project Quick-View Modal Controller ---
     const qvModal = document.getElementById('project-quickview-modal');
