@@ -2848,3 +2848,30 @@ code, pre, .font-mono {
   color: var(--accent-primary);
   transform: rotate(45deg);
 }
+
+/* Interactive Click Ripple Effect */
+.btn, .filter-btn, .term-tab, .hero-command-pill, .hero-quick-prompt {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-wave {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleAnimation 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(16, 185, 129, 0.35);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.btn-primary .ripple-wave {
+  background: rgba(10, 11, 14, 0.3);
+}
+
+@keyframes rippleAnimation {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

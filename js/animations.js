@@ -386,4 +386,32 @@
     });
   }
 
+
+  // --- Global Click Ripple Micro-Interaction ---
+  document.addEventListener('click', function (e) {
+    const target = e.target.closest('.btn, .filter-btn, .term-tab, .hero-command-pill, .hero-quick-prompt');
+    if (!target) return;
+
+    const rect = target.getBoundingClientRect();
+    const circle = document.createElement('span');
+    const diameter = Math.max(rect.width, rect.height);
+    const radius = diameter / 2;
+
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${e.clientX - rect.left - radius}px`;
+    circle.style.top = `${e.clientY - rect.top - radius}px`;
+    circle.classList.add('ripple-wave');
+
+    const existingRipple = target.querySelector('.ripple-wave');
+    if (existingRipple) {
+      existingRipple.remove();
+    }
+
+    target.appendChild(circle);
+
+    setTimeout(() => {
+      circle.remove();
+    }, 600);
+  });
+
 })();
